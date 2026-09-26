@@ -2,6 +2,10 @@
 
 Dieses Verzeichnis katalogisiert geprüfte Burki24-Projekte oder konkrete Implementierungen, die als Beispiel dienen. Referenzen sind nicht automatisch verbindlich und werden nicht blind kopiert.
 
+## Katalog
+
+- [`Symcon_ModuleHelper`](Symcon_ModuleHelper.md): zentrale Helper-Quelle, Manifest- und Consumer-Synchronisierung sowie projektspezifische Abgrenzung von den allgemeinen Modulstandards
+
 Jeder Eintrag sollte enthalten:
 
 - Repository und möglichst unveränderliche Version, Tag oder Commit
