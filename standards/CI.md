@@ -34,3 +34,5 @@ Der Pull Request beschreibt:
 - welche CI-Prüfungen erwartet werden;
 - warum eine Prüfung gegebenenfalls nicht ausführbar oder nicht relevant war;
 - ob die Änderung die unterstützte Plattform IP-Symcon 9 / PHP 8.5 berührt.
+
+Die Entscheidung für die gemeinsame CI-Basis steht in [`ADR 0004`](../adr/0004-use-symcon-moduleci.md).

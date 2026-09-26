@@ -6,7 +6,17 @@
 - Aufgaben werden in kurzlebigen, eindeutig benannten Feature- oder Fix-Branches umgesetzt.
 - Pull Requests für laufende Entwicklung zielen auf `dev`, sofern die lokale Projektregel nichts ausdrücklich anderes festlegt.
 - Nach dem Merge bleibt `dev` bestehen. Optionen zum automatischen Löschen gelten nur für den Quellbranch des Pull Requests, niemals für `dev`.
-- Ein stabiler oder Release-Zweig wird ausschließlich nach der dokumentierten Praxis des jeweiligen Repositories verwendet.
+- `main` repräsentiert in den üblichen Burki24-Modul-Repositories den stabilen beziehungsweise veröffentlichten Stand.
+- Zusätzliche dauerhafte Versionszweige werden ausschließlich nach der dokumentierten Praxis des jeweiligen Repositories verwendet.
+
+## Release und Rücksynchronisierung
+
+1. Bereite den Release-Stand auf `dev` vor und führe die vorgesehenen Prüfungen aus.
+2. Führe `dev` über einen geprüften Pull Request nach `main`.
+3. Erstelle Tags und Releases nur vom geprüften stabilen Stand.
+4. Synchronisiere das Merge-Ergebnis aus `main` anschließend zurück nach `dev`, damit beide Zweige denselben veröffentlichten Ausgangspunkt besitzen.
+
+Die Rücksynchronisierung wird nicht durch Neuanlage oder Löschen von `dev` ersetzt. Projekte mit weiteren dauerhaften Zweigen beschreiben ihre Zielrichtung und Rücksynchronisierung ausdrücklich in der lokalen `AGENTS.md`.
 
 ## Änderungen vorbereiten
 
@@ -27,3 +37,5 @@
 ## Konflikte und Abweichungen
 
 Konflikte werden anhand der aktuellen Architektur gelöst, nicht durch pauschales Überschreiben. Dauerhafte Abweichungen von diesem Workflow werden in der lokalen `AGENTS.md` dokumentiert; Architekturfolgen erhalten bei Bedarf ein ADR.
+
+Die Entscheidung für das dauerhafte Branch-Modell steht in [`ADR 0005`](../adr/0005-use-persistent-dev-main-workflow.md).

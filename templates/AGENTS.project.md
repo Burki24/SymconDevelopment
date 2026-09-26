@@ -6,7 +6,8 @@ Lies zuerst `../SymconDevelopment/AGENTS.md` und die für die Aufgabe relevanten
 
 - Zweck: <!-- kurzer Projektzweck -->
 - Relevante Module: <!-- Modulnamen -->
-- Zusätzliche Einstiegspunkte: <!-- Dateien oder Dokumente -->
+- Projektkontext: [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md) <!-- Datei aus der zentralen Vorlage anlegen oder Eintrag entfernen -->
+- Zusätzliche Einstiegspunkte: <!-- weitere Dateien oder Dokumente -->
 
 ## Ergänzungen oder Abweichungen
 

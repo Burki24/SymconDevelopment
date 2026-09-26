@@ -2,6 +2,16 @@
 
 ADRs dokumentieren Entscheidungen, die langfristig Architektur, Kompatibilität, Abhängigkeiten oder mehrere Repositories betreffen. Sie halten nicht nur das Ergebnis, sondern auch Kontext, Alternativen und Folgen fest.
 
+## Katalog
+
+| ADR | Status | Entscheidung |
+| --- | --- | --- |
+| [`0001`](0001-central-symcon-documentation.md) | Angenommen | Symcon-Dokumentation zentral und zweisprachig vorhalten |
+| [`0002`](0002-lean-saef-adaptation.md) | Angenommen | SAEF schlank und konzeptionell adaptieren |
+| [`0003`](0003-use-symcon-modulehelper.md) | Angenommen | `Symcon_ModuleHelper` als kanonische Helper-Quelle verwenden |
+| [`0004`](0004-use-symcon-moduleci.md) | Angenommen | `Symcon_ModuleCI` als gemeinsame CI-Basis verwenden |
+| [`0005`](0005-use-persistent-dev-main-workflow.md) | Angenommen | dauerhaftes `dev`/`main`-Branch-Modell verwenden |
+
 ## Benennung
 
 ```text

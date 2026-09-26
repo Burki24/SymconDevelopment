@@ -1,6 +1,6 @@
 # SymconDevelopment
 
-`SymconDevelopment` ist die schlanke, zentrale Entwicklungsbasis für Burki24-Symcon-Projekte. Das Repository bündelt gemeinsame Arbeitsregeln, Qualitätsstandards, Entscheidungsvorlagen und wiederverwendbares Wissen, ohne die einzelnen Modul-Repositories mit kopierten Regelwerken zu belasten.
+`SymconDevelopment` ist die schlanke, zentrale Entwicklungsbasis für Burki24-Symcon-Projekte. Das Repository bündelt gemeinsame Arbeitsregeln, Prinzipien, Qualitätsstandards, Entscheidungsvorlagen und wiederverwendbares Wissen, ohne die einzelnen Modul-Repositories mit kopierten Regelwerken zu belasten.
 
 Die Basis ist von guten Ideen aus SAEF inspiriert, bleibt aber auf die bestehende Burki24-Infrastruktur zugeschnitten. Sie übernimmt keine SAEF-spezifischen Deployment-, Runtime-Mirror-, SSH-/PowerShell- oder MQTT-Frameworkteile.
 
@@ -16,13 +16,15 @@ Die Basis ist von guten Ideen aus SAEF inspiriert, bleibt aber auf die bestehend
 - Vor Änderungen werden die vorhandene Architektur, die Projektregeln und vergleichbare Implementierungen gelesen.
 - Der dauerhafte Entwicklungszweig `dev` bleibt nach Pull Requests bestehen.
 
-Die ausführlichen Regeln stehen in [AGENTS.md](AGENTS.md) und in den Dokumenten unter [`standards/`](standards/).
+Die Leserichtung beginnt in [AGENTS.md](AGENTS.md). Aufbau und Zuständigkeiten beschreibt [ARCHITECTURE.md](ARCHITECTURE.md); die ausführlichen Leitlinien und Regeln stehen unter [`principles/`](principles/) und [`standards/`](standards/).
 
 ## Struktur
 
 | Pfad | Zweck |
 | --- | --- |
 | `AGENTS.md` | Zentrale Arbeitsanweisung für Menschen und Coding-Agenten |
+| `ARCHITECTURE.md` | Informationsschichten, Leserichtung und Wissensfluss |
+| `principles/` | Stabile Engineering- und Zusammenarbeitsprinzipien |
 | `standards/` | Verbindliche technische und organisatorische Standards |
 | `adr/` | Architekturentscheidungen mit Begründung und Folgen |
 | `knowledge/` | Wiederverwendbare Erkenntnisse, Fehlerbilder und Lösungswege |
@@ -56,8 +58,9 @@ Bestehende Repositories werden erst nach einer separaten, projektspezifischen Pr
 
 1. Sicherheits-, Plattform- und Repository-Vorgaben des jeweiligen Projekts
 2. ausdrücklich dokumentierte projektspezifische Abweichungen in dessen `AGENTS.md`
-3. die zentrale `AGENTS.md` und die Standards dieses Repositories
-4. Knowledge-Artikel und Referenzen als unterstützende, nicht verbindliche Hinweise
+3. die zentrale `AGENTS.md`, Prinzipien und Standards dieses Repositories
+4. angenommene ADRs innerhalb ihres dokumentierten Geltungsbereichs
+5. Knowledge-Artikel und Referenzen als unterstützende, nicht verbindliche Hinweise
 
 Abweichungen von zentralen Regeln müssen begründet werden. Dauerhafte Architekturabweichungen gehören zusätzlich in ein ADR des betroffenen Projekts.
 
