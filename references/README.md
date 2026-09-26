@@ -5,6 +5,8 @@ Dieses Verzeichnis katalogisiert geprüfte Burki24-Projekte oder konkrete Implem
 ## Katalog
 
 - [`Symcon_ModuleHelper`](Symcon_ModuleHelper.md): zentrale Helper-Quelle, Manifest- und Consumer-Synchronisierung sowie projektspezifische Abgrenzung von den allgemeinen Modulstandards
+- [`SAEF`](SAEF.md): geprüfte konzeptionelle Inspirationsquelle mit klarer Übernahme- und Ausschlussgrenze
+- [`Symcon-Dokumentation`](symcon/README.md): lokale deutsche und englische Snapshots der offiziellen Dokumentation zur projektübergreifenden Volltextsuche
 
 Jeder Eintrag sollte enthalten:
 

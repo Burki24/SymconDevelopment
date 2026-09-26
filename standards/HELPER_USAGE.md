@@ -29,3 +29,5 @@ Wenn eine neue Helper-Version im Zielprojekt noch nicht verfügbar ist, werden A
 ## Prüfung
 
 Bei Änderungen an gemeinsamem Verhalten sind alle bekannten Aufrufer, ihre Eingabeformen und ihre Fehlererwartungen zu prüfen. Öffentliche Verträge werden nicht unbeabsichtigt über eine Helper-Änderung verschoben.
+
+Die zugrunde liegende Zuständigkeitsentscheidung steht in [`ADR 0003`](../adr/0003-use-symcon-modulehelper.md).

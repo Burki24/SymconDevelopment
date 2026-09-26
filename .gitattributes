@@ -1,0 +1,2 @@
+# Preserve the official documentation snapshots byte-for-byte.
+references/symcon/llms-*.txt -text

@@ -23,6 +23,8 @@ coverage/
 .env
 .env.*
 !.env.example
+private/
+*.local.*
 
 # Logs and temporary files
 *.log

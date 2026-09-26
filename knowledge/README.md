@@ -4,6 +4,17 @@ Hier liegt wiederverwendbares Praxiswissen für Burki24-Symcon-Projekte: typisch
 
 Knowledge-Artikel sind keine verbindlichen Standards und keine Ersatz-ADRs. Ändert eine Erkenntnis eine verbindliche Regel, wird zusätzlich das zuständige Standarddokument angepasst und gegebenenfalls ein ADR erstellt.
 
+## Katalog
+
+| Artikel | Status | Thema |
+| --- | --- | --- |
+| [`idempotent-configuration.md`](idempotent-configuration.md) | Bestätigt | wiederholbare Objekt- und Modulkonfiguration |
+| [`configuration-form-patterns.md`](configuration-form-patterns.md) | Bestätigt | robuste statische und dynamische Formulare |
+| [`variable-presentations.md`](variable-presentations.md) | Bestätigt | native Darstellungen, Legacy-Profile und Actions |
+| [`safe-module-migrations.md`](safe-module-migrations.md) | Bestätigt | versionierte und wiederanlauffähige Migrationen |
+| [`testing-with-symconstubs.md`](testing-with-symconstubs.md) | Bestätigt | Aussagekraft und Grenzen der Stub-basierten Tests |
+| [`runtime-diagnostics.md`](runtime-diagnostics.md) | Entwurf | begrenzte Diagnosezustände ohne neuen Helper-Vertrag |
+
 ## Anforderungen an einen Artikel
 
 - konkreter Kontext und betroffene Versionen
