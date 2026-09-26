@@ -27,7 +27,13 @@ Die ausführlichen Regeln stehen in [AGENTS.md](AGENTS.md) und in den Dokumenten
 | `adr/` | Architekturentscheidungen mit Begründung und Folgen |
 | `knowledge/` | Wiederverwendbare Erkenntnisse, Fehlerbilder und Lösungswege |
 | `templates/` | Kurze Vorlagen für Projektanbindung und Moduldokumentation |
-| `references/` | Kuratierte Referenzprojekte und Referenzimplementierungen |
+| `references/` | Kuratierte Referenzprojekte, Referenzimplementierungen und externe technische Dokumentation |
+
+## Lokale Symcon-Dokumentation
+
+Unter [`references/symcon/`](references/symcon/) liegen deutsch- und englischsprachige, projektübergreifend nutzbare Snapshots der offiziellen Symcon-Dokumentation. Dadurch können Menschen und Coding-Agenten Symcon-APIs und Plattformdetails lokal durchsuchen, ohne die vollständige Dokumentation in jedes Modul-Repository zu kopieren.
+
+Der Snapshot ist eine datierte externe Referenz und keine verbindliche Arbeitsanweisung. Für zeitabhängige Aussagen bleibt die aktuelle offizielle Dokumentation maßgeblich. Herkunft, Stand und Aktualisierung sind in [`references/symcon/README.md`](references/symcon/README.md) beschrieben.
 
 ## Ein bestehendes Repository anbinden
 
@@ -57,4 +63,4 @@ Abweichungen von zentralen Regeln müssen begründet werden. Dauerhafte Architek
 
 ## Pflege
 
-Änderungen an verbindlichen Standards erfolgen per Pull Request. Änderungen mit langfristigen Architekturfolgen erhalten ein ADR. Praxiswissen ohne normativen Charakter gehört nach `knowledge/`; Beispiele gehören nach `references/`.
+Änderungen an verbindlichen Standards erfolgen per Pull Request. Änderungen mit langfristigen Architekturfolgen erhalten ein ADR. Praxiswissen ohne normativen Charakter gehört nach `knowledge/`; Beispiele und externe Referenzen gehören nach `references/`.
