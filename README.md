@@ -31,11 +31,11 @@ Die Leserichtung beginnt in [AGENTS.md](AGENTS.md). Aufbau und Zuständigkeiten 
 | `templates/` | Kurze Vorlagen für Projektanbindung und Moduldokumentation |
 | `references/` | Kuratierte Referenzprojekte, Referenzimplementierungen und externe technische Dokumentation |
 
-## Lokale Symcon-Dokumentation
+## Offizielle Symcon-Dokumentation für KI-Agenten
 
-Unter [`references/symcon/`](references/symcon/) liegen deutsch- und englischsprachige, projektübergreifend nutzbare Snapshots der offiziellen Symcon-Dokumentation. Dadurch können Menschen und Coding-Agenten Symcon-APIs und Plattformdetails lokal durchsuchen, ohne die vollständige Dokumentation in jedes Modul-Repository zu kopieren.
+Symcon stellt unter [`https://www.symcon.de/de/llms.txt`](https://www.symcon.de/de/llms.txt) einen direkt gepflegten Einstieg in die aktuelle Dokumentation bereit. Für PHP-, Kern- und Modulfunktionen wird zuerst der [`Funktionsindex`](https://www.symcon.de/de/llms/function-index.md) geladen und anschließend nur die dort verlinkte relevante Detaildatei.
 
-Der Snapshot ist eine datierte externe Referenz und keine verbindliche Arbeitsanweisung. Für zeitabhängige Aussagen bleibt die aktuelle offizielle Dokumentation maßgeblich. Herkunft, Stand und Aktualisierung sind in [`references/symcon/README.md`](references/symcon/README.md) beschrieben.
+Die vollständige Dokumentation wird nicht in diesem oder in einzelnen Modul-Repositories gespiegelt. Die verbindliche Leserichtung und ihre Grenzen sind in [`AGENTS.md`](AGENTS.md) und [`references/symcon/README.md`](references/symcon/README.md) beschrieben.
 
 ## Ein bestehendes Repository anbinden
 

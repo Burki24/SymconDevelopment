@@ -52,4 +52,4 @@ Mindestens zu prüfen sind:
 - `ApplyChanges()` weist ungültige oder unvollständige Konfiguration kontrolliert ab;
 - sichtbare Texte sind gemäß Projektkonvention lokalisierbar.
 
-API-Details und verfügbare Elemente werden in der [lokalen Symcon-Dokumentation](../references/symcon/README.md) nachgeschlagen. Der zentrale Helper-Vertrag ist unter [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md) beschrieben.
+API-Details und verfügbare Elemente werden über die [offiziellen Symcon-Dokumentationseinstiege](../references/symcon/README.md) nachgeschlagen. Der zentrale Helper-Vertrag ist unter [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md) beschrieben.

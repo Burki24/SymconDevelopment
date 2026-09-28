@@ -58,4 +58,4 @@ Kompatible Altinstallationen dürfen nicht stillschweigend ihre semantische Dars
 - Tests prüfen den Presentation-Vertrag und nicht nur die Existenz der Variable.
 - Modul-README dokumentiert sichtbare Variablen, Einheiten, Actions und relevante Änderungen.
 
-Verfügbare native Darstellungen werden in der [lokalen Symcon-Dokumentation](../references/symcon/README.md) geprüft. Der aktuelle gemeinsame Helper-Vertrag ist unter [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md) katalogisiert.
+Verfügbare native Darstellungen werden über die [offiziellen Symcon-Dokumentationseinstiege](../references/symcon/README.md) geprüft. Der aktuelle gemeinsame Helper-Vertrag ist unter [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md) katalogisiert.
