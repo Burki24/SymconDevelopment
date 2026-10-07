@@ -14,6 +14,8 @@ Knowledge-Artikel sind keine verbindlichen Standards und keine Ersatz-ADRs. Änd
 | [`safe-module-migrations.md`](safe-module-migrations.md) | Bestätigt | versionierte und wiederanlauffähige Migrationen |
 | [`testing-with-symconstubs.md`](testing-with-symconstubs.md) | Bestätigt | Aussagekraft und Grenzen der Stub-basierten Tests |
 | [`runtime-diagnostics.md`](runtime-diagnostics.md) | Entwurf | begrenzte Diagnosezustände ohne neuen Helper-Vertrag |
+| [`strict-module-helper-compatibility.md`](strict-module-helper-compatibility.md) | Dokumentationsgeprüft | Basisklassen-Verträge und projektspezifische Strict-Kompatibilität |
+| [`stub-loader-root-directories.md`](stub-loader-root-directories.md) | Quelltextgeprüft | zusätzliche Wurzelordner beim Laden einer Bibliothek durch Symcon-Stubs |
 
 ## Anforderungen an einen Artikel
 

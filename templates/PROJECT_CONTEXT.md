@@ -20,6 +20,7 @@ Dieses Dokument beschreibt die fachliche und technische Orientierung eines einze
 | Bereich | Datei oder Verzeichnis | Bedeutung |
 | --- | --- | --- |
 | Bibliothek | `library.json` | <!-- Name und Bibliotheksvertrag --> |
+| Änderungen | `CHANGELOG.md` | <!-- unveröffentlichte Änderungen und Versionshistorie --> |
 | Modul | `ModulName/module.php` | <!-- fachliche Hauptverantwortung --> |
 | Konfiguration | `ModulName/form.json` | <!-- wichtige Properties --> |
 | Helper | `libs/helper/` | <!-- eingebundene zentrale Helper --> |
@@ -56,6 +57,14 @@ Beschreibe die wichtigsten Komponenten und ihren Datenfluss in wenigen Absätzen
 - Maßgebliche CI: <!-- Workflows und unterstützte Matrix -->
 - Branch- und Release-Besonderheiten: <!-- nur Abweichungen von zentralem Standard -->
 - Notwendige Praxistests: <!-- Symcon, Gerät, Visualisierung oder externer Dienst -->
+
+## Diagnose und Entwicklung
+
+- Fehlerdiagnose: <!-- relevante Statusmeldungen, bereinigte Logs oder Dokumente unter docs/ -->
+- Entwicklungshinweise: <!-- interne Architekturhinweise und technische Einschränkungen -->
+- Systemrollen und erlaubte Zugriffe: <!-- Entwicklungs-/Test-/Produktivrolle und auftragsbezogene oder ausdrückliche dauerhafte Freigaben, ohne private Endpunkte -->
+
+Diese internen Hinweise gehören nicht in die Benutzer-READMEs.
 
 ## Bekannte Risiken und offene Fragen
 

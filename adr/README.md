@@ -12,6 +12,7 @@ ADRs dokumentieren Entscheidungen, die langfristig Architektur, Kompatibilität,
 | [`0004`](0004-use-symcon-moduleci.md) | Angenommen | `Symcon_ModuleCI` als gemeinsame CI-Basis verwenden |
 | [`0005`](0005-use-persistent-dev-main-workflow.md) | Angenommen | dauerhaftes `dev`/`main`-Branch-Modell verwenden |
 | [`0006`](0006-use-official-symcon-llms-sources.md) | Angenommen | offiziell gepflegte Symcon-`llms.txt`-Quellen direkt verwenden |
+| [`0007`](0007-user-readmes-and-changelog.md) | Angenommen | Benutzer-READMEs und Versionshistorie trennen |
 
 ## Benennung
 
@@ -20,6 +21,8 @@ NNNN-kurzer-titel.md
 ```
 
 Die Nummern steigen fortlaufend. [`0000-template.md`](0000-template.md) dient als Vorlage und wird für eine neue Entscheidung kopiert.
+
+Projektspezifische ADRs bleiben im jeweiligen Projekt versioniert. Bei Modulbibliotheken mit automatisch ladenden Symcon-Stubs werden neue ADRs bevorzugt unter `docs/adr/` abgelegt, damit der Dokumentationsordner nicht als Modul geladen wird. Vorhandene Ablagen werden nur nach projektspezifischer Prüfung umgestellt; siehe [`knowledge/stub-loader-root-directories.md`](../knowledge/stub-loader-root-directories.md).
 
 ## Status
 

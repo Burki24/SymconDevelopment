@@ -10,6 +10,8 @@ Diese Dokumente übersetzen die Engineering-Prinzipien in konkrete gemeinsame Re
 - [`CONFIGURATION_FORM.md`](CONFIGURATION_FORM.md): statische und dynamische Konfigurationsformulare
 - [`VARIABLE_PRESENTATION.md`](VARIABLE_PRESENTATION.md): native Variablendarstellungen und Actions
 - [`MIGRATIONS.md`](MIGRATIONS.md): kompatible, wiederholbare Modulmigrationen
+- [`README_CONTENT.md`](README_CONTENT.md): Benutzer-READMEs ohne Fehlerdiagnose und Entwicklungshinweise
+- [`CHANGELOG.md`](CHANGELOG.md): sichtbare Änderungen, Format und Versionszuordnung
 
 ## Qualität und Zusammenarbeit
 
@@ -17,5 +19,6 @@ Diese Dokumente übersetzen die Engineering-Prinzipien in konkrete gemeinsame Re
 - [`CI.md`](CI.md): gemeinsame CI-Basis
 - [`GIT_WORKFLOW.md`](GIT_WORKFLOW.md): Branches, Pull Requests und Releases
 - [`PRIVATE_DATA.md`](PRIVATE_DATA.md): Geheimnisse und installationsbezogene Daten
+- [`SYMCON_ACCESS.md`](SYMCON_ACCESS.md): Rollen und erlaubter Umfang bei Entwicklungs- und Produktivzugriffen
 
 Ein Standard beschreibt gemeinsame Mindestanforderungen. Langfristige Entscheidungen hinter einer Regel werden zusätzlich als ADR dokumentiert; praktische Diagnose- und Lösungsmuster gehören in die Knowledge Base.

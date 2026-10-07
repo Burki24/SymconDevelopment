@@ -23,16 +23,18 @@ Kurze Beschreibung des fachlichen Zwecks.
 
 ## Verwendung
 
-Beschreibe sichtbare Variablen, Actions, Statuszustände und typische Abläufe.
+Beschreibe Actions, relevante Statuszustände und typische Abläufe aus Benutzersicht.
+
+## Variablen
+
+| Variable | Ident | Typ | Beschreibung |
+| --- | --- | --- | --- |
+| <!-- Name --> | <!-- Ident --> | <!-- Typ --> | <!-- Bedeutung, Einheit und Bedienbarkeit --> |
 
 ## Öffentliche Schnittstellen
 
 Dokumentiere relevante öffentliche Methoden, Events oder Datenformate. Entferne diesen Abschnitt, wenn es keine gibt.
 
-## Fehlerdiagnose
+## Lizenz
 
-Nenne aussagekräftige Statusmeldungen, Logs und bekannte Konfigurationsfehler.
-
-## Entwicklung und Tests
-
-Verweise auf die relevanten Tests unter `tests` und die im Repository dokumentierten Prüfkommandos.
+<!-- Tatsächliche Projektlizenz oder Verweis auf die Bibliotheks-README. Vorhandene Spendenhinweise bei Bedarf übernehmen. -->

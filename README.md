@@ -10,6 +10,8 @@ Die Basis ist von guten Ideen aus SAEF inspiriert, bleibt aber auf die bestehend
 - Gemeinsame Helper liegen unter `libs/helper`; `.shared` wird nicht verwendet.
 - Tests liegen unter `tests`; `.tests` wird nicht verwendet.
 - Jedes Modul besitzt eine eigene `README.md`.
+- Bibliotheks- und Modul-READMEs enthalten Benutzerinformationen; Fehlerdiagnose und Entwicklungshinweise stehen in interner Projektdokumentation nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md).
+- Jede Modulbibliothek führt sichtbare Änderungen in einer `CHANGELOG.md` nach [`standards/CHANGELOG.md`](standards/CHANGELOG.md); Versionsmetadaten werden nur auf Auftrag erhöht.
 - Vorhandene Funktionen aus `Symcon_ModuleHelper` werden bevorzugt.
 - Lokale Duplikate zentraler Helper sind nicht erlaubt.
 - CI basiert auf `Symcon_ModuleCI` v1.0.0 und umfasst StylePHP, php-cs-fixer und `validate_structure`.

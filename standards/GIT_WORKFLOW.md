@@ -12,6 +12,7 @@
 ## Release und Rücksynchronisierung
 
 1. Bereite den Release-Stand auf `dev` vor und führe die vorgesehenen Prüfungen aus.
+   Ordne die unveröffentlichten Changelog-Einträge der ausdrücklich bestätigten Version und dem Veröffentlichungsdatum zu; gleiche die Version mit `library.json` ab, gemäß [`CHANGELOG.md`](CHANGELOG.md).
 2. Führe `dev` über einen geprüften Pull Request nach `main`.
 3. Erstelle Tags und Releases nur vom geprüften stabilen Stand.
 4. Synchronisiere das Merge-Ergebnis aus `main` anschließend zurück nach `dev`, damit beide Zweige denselben veröffentlichten Ausgangspunkt besitzen.
