@@ -10,6 +10,7 @@ Symcon-Repositories sollen vertraut, prüfbar und ohne projektspezifische Sonder
 Repository/
 ├── library.json
 ├── README.md
+├── CHANGELOG.md                  # sichtbare Änderungen und Versionshistorie
 ├── composer.json                 # falls im Projekt verwendet
 ├── libs/
 │   └── helper/                   # gemeinsame Helper und Einbindungen
@@ -31,6 +32,8 @@ Die reale Struktur des jeweiligen Repositories bleibt maßgeblich. Optionale Dat
 - Verwende `libs/helper` für gemeinsam genutzte Hilfsbausteine. Lege kein `.shared` an.
 - Verwende `tests` für Tests. Lege kein `.tests` an.
 - Jedes veröffentlichte Modul besitzt eine eigene `README.md` mit Zweck, Voraussetzungen, Konfiguration und sichtbarem Verhalten.
+- Die Bibliotheks-README und Modul-READMEs folgen [`README_CONTENT.md`](README_CONTENT.md); Fehlerdiagnose und Entwicklungshinweise stehen in der internen Dokumentation.
+- Jede Modulbibliothek besitzt eine `CHANGELOG.md` nach [`CHANGELOG.md`](CHANGELOG.md).
 - Bewahre die vorhandene Benennung und Aufteilung eines Repositories, solange keine begründete Migration beschlossen wurde.
 - Nutze vorhandene zentrale Helper, insbesondere `Symcon_ModuleHelper`; kopiere deren Funktionen nicht in Module.
 - Neue gemeinsame Abstraktionen benötigen mindestens zwei konkrete Anwendungsfälle oder eine bereits beschlossene zentrale Zuständigkeit.
@@ -45,3 +48,5 @@ Die reale Struktur des jeweiligen Repositories bleibt maßgeblich. Optionale Dat
 5. Welche Tests und Modul-READMEs müssen gemeinsam angepasst werden?
 
 Strukturelle Migrationen werden nicht nebenbei vorgenommen. Sie benötigen einen eigenen Umfang, einen Kompatibilitätsplan und bei dauerhaften Architekturfolgen ein ADR.
+
+Bei Stub-Tests, die eine Bibliothek automatisch laden, sind zusätzliche Wurzelordner mit der eingebundenen Stub-Version abzugleichen. Neue projektspezifische ADRs können unter `docs/adr/` liegen und bleiben versioniert; bestehende Ablagen werden nicht pauschal migriert. Hintergrund: [`knowledge/stub-loader-root-directories.md`](../knowledge/stub-loader-root-directories.md).

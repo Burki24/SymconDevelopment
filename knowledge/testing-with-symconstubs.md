@@ -40,4 +40,4 @@ Stubs beweisen keine vollständige Ereignisreihenfolge, Visualisierungsdarstellu
 
 - [`standards/TESTING.md`](../standards/TESTING.md)
 - [`standards/CI.md`](../standards/CI.md)
-- [Lokale Symcon-Dokumentation](../references/symcon/README.md)
+- [Offizielle Symcon-Dokumentation für KI-Agenten](../references/symcon/README.md)

@@ -42,4 +42,4 @@ Nicht jede dynamische Änderung lässt sich ohne Laufzeitzugriff erzeugen. Solch
 
 - [`standards/CONFIGURATION_FORM.md`](../standards/CONFIGURATION_FORM.md)
 - [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md)
-- [Lokale Symcon-Dokumentation](../references/symcon/README.md)
+- [Offizielle Symcon-Dokumentation für KI-Agenten](../references/symcon/README.md)

@@ -20,6 +20,12 @@
 
 Vor einer neuen Hilfsmethode wird nach einer passenden Funktion in `Symcon_ModuleHelper`, `libs/helper` und vergleichbaren Modulen gesucht. Regeln zur Zuständigkeit stehen in [`HELPER_USAGE.md`](HELPER_USAGE.md).
 
+## Basisklasse und Strict-Kompatibilität
+
+Für neue Module wird `IPSModuleStrict` gemäß der [offiziellen Symcon-Empfehlung](https://www.symcon.de/de/llms/developer/sdk-tools/sdk-php/module.md) verwendet. Öffentliche Methoden erhalten vollständige Type Hints. Überschriebene Methoden und eingebundene Traits müssen zur tatsächlich verwendeten Basisklasse passen, einschließlich Sichtbarkeit, Parameter- und Rückgabetypen.
+
+Bestehende Module werden nicht beiläufig von `IPSModule` auf `IPSModuleStrict` umgestellt. Rückgabewerte der Variablenregistrierung, Schreibzugriffe und Datenfluss können sich unterscheiden; ein Wechsel benötigt eine eigene Kompatibilitätsprüfung. Diagnose und Nachweis: [`knowledge/strict-module-helper-compatibility.md`](../knowledge/strict-module-helper-compatibility.md).
+
 ## Formatierung
 
 Formatierungsänderungen werden mit der im Repository festgelegten php-cs-fixer-Konfiguration erzeugt beziehungsweise geprüft. StylePHP und php-cs-fixer müssen gemeinsam erfolgreich sein; manuelle Stilvorlieben dürfen die Projektkonfiguration nicht umgehen.

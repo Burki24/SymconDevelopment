@@ -10,6 +10,8 @@ Die Basis ist von guten Ideen aus SAEF inspiriert, bleibt aber auf die bestehend
 - Gemeinsame Helper liegen unter `libs/helper`; `.shared` wird nicht verwendet.
 - Tests liegen unter `tests`; `.tests` wird nicht verwendet.
 - Jedes Modul besitzt eine eigene `README.md`.
+- Bibliotheks- und Modul-READMEs enthalten Benutzerinformationen; Fehlerdiagnose und Entwicklungshinweise stehen in interner Projektdokumentation nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md).
+- Jede Modulbibliothek führt sichtbare Änderungen in einer `CHANGELOG.md` nach [`standards/CHANGELOG.md`](standards/CHANGELOG.md); Versionsmetadaten werden nur auf Auftrag erhöht.
 - Vorhandene Funktionen aus `Symcon_ModuleHelper` werden bevorzugt.
 - Lokale Duplikate zentraler Helper sind nicht erlaubt.
 - CI basiert auf `Symcon_ModuleCI` v1.0.0 und umfasst StylePHP, php-cs-fixer und `validate_structure`.
@@ -31,11 +33,11 @@ Die Leserichtung beginnt in [AGENTS.md](AGENTS.md). Aufbau und Zuständigkeiten 
 | `templates/` | Kurze Vorlagen für Projektanbindung und Moduldokumentation |
 | `references/` | Kuratierte Referenzprojekte, Referenzimplementierungen und externe technische Dokumentation |
 
-## Lokale Symcon-Dokumentation
+## Offizielle Symcon-Dokumentation für KI-Agenten
 
-Unter [`references/symcon/`](references/symcon/) liegen deutsch- und englischsprachige, projektübergreifend nutzbare Snapshots der offiziellen Symcon-Dokumentation. Dadurch können Menschen und Coding-Agenten Symcon-APIs und Plattformdetails lokal durchsuchen, ohne die vollständige Dokumentation in jedes Modul-Repository zu kopieren.
+Symcon stellt unter [`https://www.symcon.de/de/llms.txt`](https://www.symcon.de/de/llms.txt) einen direkt gepflegten Einstieg in die aktuelle Dokumentation bereit. Für PHP-, Kern- und Modulfunktionen wird zuerst der [`Funktionsindex`](https://www.symcon.de/de/llms/function-index.md) geladen und anschließend nur die dort verlinkte relevante Detaildatei.
 
-Der Snapshot ist eine datierte externe Referenz und keine verbindliche Arbeitsanweisung. Für zeitabhängige Aussagen bleibt die aktuelle offizielle Dokumentation maßgeblich. Herkunft, Stand und Aktualisierung sind in [`references/symcon/README.md`](references/symcon/README.md) beschrieben.
+Die vollständige Dokumentation wird nicht in diesem oder in einzelnen Modul-Repositories gespiegelt. Die verbindliche Leserichtung und ihre Grenzen sind in [`AGENTS.md`](AGENTS.md) und [`references/symcon/README.md`](references/symcon/README.md) beschrieben.
 
 ## Ein bestehendes Repository anbinden
 

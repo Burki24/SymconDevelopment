@@ -23,7 +23,7 @@ Eine vollständige Übernahme würde parallele Helper- und CI-Verträge sowie Be
 - eigene Symcon-, PHP-, Test-, CI- und Git-Standards;
 - ADRs und eine Knowledge Base;
 - schlanke Projekt- und Dokumentationsvorlagen;
-- kuratierte Referenzen und lokale Symcon-Dokumentation.
+- kuratierte Referenzen und eine klare Leserichtung zur offiziell gepflegten Symcon-Dokumentation.
 
 Nicht übernommen werden:
 

@@ -1,10 +1,12 @@
 # ADR 0001: Symcon-Dokumentation zentral vorhalten
 
-- Status: Angenommen
+- Status: Ersetzt
 - Datum: 2026-09-26
 - Entscheider: Burki24
 - Ersetzt: –
-- Ersetzt durch: –
+- Ersetzt durch: [`ADR 0006`](0006-use-official-symcon-llms-sources.md)
+
+Dieses ADR dokumentiert die frühere Snapshot-Strategie und ist nicht mehr anzuwenden. Die aktive Entscheidung steht in ADR 0006.
 
 ## Kontext
 

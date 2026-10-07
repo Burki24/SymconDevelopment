@@ -40,4 +40,4 @@ Benutzer können Darstellungen oder Vorlagen installationsbezogen angepasst habe
 
 - [`standards/VARIABLE_PRESENTATION.md`](../standards/VARIABLE_PRESENTATION.md)
 - [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md)
-- [Lokale Symcon-Dokumentation](../references/symcon/README.md)
+- [Offizielle Symcon-Dokumentation für KI-Agenten](../references/symcon/README.md)

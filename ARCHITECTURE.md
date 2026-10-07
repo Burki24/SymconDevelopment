@@ -32,7 +32,7 @@ vorhandene Helper, Implementierung, Tests und CI
 bei Bedarf knowledge/ und references/
 ```
 
-Es wird nur der für die konkrete Aufgabe benötigte Kontext geladen. Große Referenzdateien wie die lokale Symcon-Dokumentation werden gezielt durchsucht, nicht vollständig als Standardkontext behandelt.
+Es wird nur der für die konkrete Aufgabe benötigte Kontext geladen. Die offizielle Symcon-`llms.txt` dient als Index; verlinkte Markdown-Seiten werden gezielt und nur bei Bedarf geladen.
 
 ## Wissensfluss
 

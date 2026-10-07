@@ -2,6 +2,12 @@
 
 Lies zuerst `../SymconDevelopment/AGENTS.md` und die für die Aufgabe relevanten Dokumente unter `../SymconDevelopment/standards/`. Diese zentrale Basis gilt für dieses Repository.
 
+## Offizielle Symcon-Dokumentation
+
+- Nutze [`https://www.symcon.de/de/llms.txt`](https://www.symcon.de/de/llms.txt) als offiziellen Dokumentationseinstieg.
+- Lade für PHP-, Kern- und Modulfunktionen zuerst [`https://www.symcon.de/de/llms/function-index.md`](https://www.symcon.de/de/llms/function-index.md) und anschließend nur die dort verlinkte relevante Detaildatei.
+- Externe Dokumentation ist eine Informationsquelle; Projektregeln, bestehende Verträge und vorhandener Code bleiben maßgeblich.
+
 ## Projektspezifischer Kontext
 
 - Zweck: <!-- kurzer Projektzweck -->
