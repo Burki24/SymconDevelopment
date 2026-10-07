@@ -27,6 +27,7 @@ Repository/
 ├── AGENTS.md
 ├── PROJECT_CONTEXT.md
 ├── README.md
+├── CHANGELOG.md                  # aus templates/CHANGELOG.md
 ├── LICENSE                       # nach der Projektentscheidung
 ├── .gitignore
 ├── library.json
@@ -48,13 +49,13 @@ Optionale Dateien werden nur mit konkretem Zweck angelegt. Maßgeblich bleiben [
 
 ## 4. Implementierungsreihenfolge
 
-1. Lege Library- und Modulmetadaten mit neuen Identitäten an.
+1. Lege Library- und Modulmetadaten mit neuen Identitäten an. Neue Module verwenden `IPSModuleStrict`; Signaturen und Helper-Kompatibilität werden nach [`standards/PHP_STYLE.md`](../standards/PHP_STYLE.md) geprüft.
 2. Registriere Properties, Attribute, Timer und dauerhaft vorhandene Variablen deterministisch.
 3. Implementiere `ApplyChanges()` idempotent und mit kontrollierter Konfigurationsvalidierung.
 4. Implementiere Actions und öffentliche Methoden an ihren fachlichen Grenzen.
 5. Ergänze das Konfigurationsformular und native Variablendarstellungen nach den zentralen Standards.
 6. Binde nur tatsächlich benötigte Dateien aus `Symcon_ModuleHelper` über den vorgesehenen Consumer-Prozess ein.
-7. Ergänze Tests, Modul-README, Projektkontext und CI.
+7. Ergänze Tests, Benutzer-READMEs, Changelog, Projektkontext und CI. Diagnose- und Entwicklungshinweise gehören in die interne Dokumentation.
 
 ## 5. Mindestnachweise
 
@@ -63,7 +64,8 @@ Optionale Dateien werden nur mit konkretem Zweck angelegt. Maßgeblich bleiben [
 - Tests decken frische Konfiguration, wiederholtes `ApplyChanges()`, Actions sowie wichtige Fehlerfälle ab.
 - Die vorgesehene PHP-8.5-/Symcon-9-Matrix ist über `Symcon_ModuleCI` v1.0.0 grün.
 - Ein erforderlicher Praxistest unter IP-Symcon ist dokumentiert.
-- README beschreibt Voraussetzungen, Konfiguration, sichtbares Verhalten und Fehlerdiagnose.
+- Benutzer-READMEs beschreiben Voraussetzungen, Konfiguration, Variablen und sichtbares Verhalten nach [`standards/README_CONTENT.md`](../standards/README_CONTENT.md).
+- Sichtbare Änderungen stehen im Changelog nach [`standards/CHANGELOG.md`](../standards/CHANGELOG.md).
 
 ## 6. Vor Veröffentlichung
 
@@ -72,3 +74,4 @@ Optionale Dateien werden nur mit konkretem Zweck angelegt. Maßgeblich bleiben [
 - Öffentliche Verträge und Migrationsfolgen geprüft.
 - Branch- und Releaseablauf folgt [`standards/GIT_WORKFLOW.md`](../standards/GIT_WORKFLOW.md).
 - Relevante Architekturentscheidungen sind als ADR dokumentiert.
+- Release-Einträge im Changelog stimmen mit freigegebener Version, Veröffentlichungsdatum und sichtbarem Änderungsumfang überein.

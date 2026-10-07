@@ -19,7 +19,7 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
 - Nutze die bestehende Repository- und Modulstruktur; maßgeblich ist [`standards/MODULE_STRUCTURE.md`](standards/MODULE_STRUCTURE.md).
 - Gemeinsamer Code liegt unter `libs/helper`, nicht unter `.shared`.
 - Tests liegen unter `tests`, nicht unter `.tests`.
-- Jedes Modul besitzt eine gepflegte `README.md`.
+- Jede Bibliothek und jedes veröffentlichte Modul besitzen eine gepflegte Benutzer-`README.md` nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md). Fehlerdiagnose und Entwicklungshinweise gehören in die interne Projektdokumentation.
 - Konfigurationsformulare folgen [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md).
 - Native Variablendarstellungen und kompatible Legacy-Profile folgen [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md).
 - Persistente Änderungen an veröffentlichten Verträgen folgen [`standards/MIGRATIONS.md`](standards/MIGRATIONS.md).
@@ -44,6 +44,7 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
 - Trenne fachliche Änderungen von rein mechanischer Formatierung.
 - Übernimm keine Implementierung blind aus Referenzen; prüfe Version, Kontext und Vertrag.
 - Dokumentiere neue oder geänderte Benutzerfunktionen in der Modul-`README.md`.
+- Trage jede sichtbare Änderung im selben Änderungszusammenhang in die Bibliotheks-`CHANGELOG.md` ein; Format und Release-Zuordnung folgen [`standards/CHANGELOG.md`](standards/CHANGELOG.md). Versionsmetadaten werden nur auf ausdrücklichen Auftrag erhöht.
 - Dokumentiere langfristige oder repositoryübergreifende Architekturentscheidungen als ADR.
 - Überführe wiederverwendbare Diagnose- oder Lösungsinformationen nach `knowledge/`, wenn sie nicht projektspezifisch sind.
 
@@ -73,3 +74,7 @@ Siehe [`standards/GIT_WORKFLOW.md`](standards/GIT_WORKFLOW.md).
 ## 6. Ausdrücklich nicht Teil dieser Basis
 
 Führe keine SAEF-spezifischen Deployment-Frameworks, Runtime-Mirrors, Filesets, SSH-/PowerShell-Orchestrierung oder MQTT-Frameworkschichten allein aufgrund dieser Basis ein. Für solche Fähigkeiten ist eine eigene fachliche Entscheidung im betroffenen Projekt erforderlich.
+
+## 7. Zugriff auf Symcon-Systeme
+
+Zugriffe auf Entwicklungs- und Produktivinstanzen folgen [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md). Serverrollen und erlaubter Umfang werden projektspezifisch festgelegt; die bloße Verfügbarkeit eines Connectors erlaubt keine Installation, Reloads oder Änderungen am laufenden System.
