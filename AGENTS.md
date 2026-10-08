@@ -21,6 +21,10 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
 - Tests liegen unter `tests`, nicht unter `.tests`.
 - Jede Bibliothek und jedes veröffentlichte Modul besitzen eine gepflegte Benutzer-`README.md` nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md). Fehlerdiagnose und Entwicklungshinweise gehören in die interne Projektdokumentation.
 - Konfigurationsformulare folgen [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md).
+- Konfigurierte Quellvariablen werden gemäß
+  [`standards/SOURCE_VARIABLE_IDENTITY.md`](standards/SOURCE_VARIABLE_IDENTITY.md)
+  ausschließlich durch ihre Variablen-ID identifiziert; Namen und Pfade sind
+  keine technischen Ersatzschlüssel.
 - Native Variablendarstellungen und kompatible Legacy-Profile folgen [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md).
 - Persistente Änderungen an veröffentlichten Verträgen folgen [`standards/MIGRATIONS.md`](standards/MIGRATIONS.md).
 - Bevorzuge `Symcon_ModuleHelper` und andere bereits eingebundene zentrale Funktionen.
