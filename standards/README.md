@@ -9,6 +9,7 @@ Diese Dokumente übersetzen die Engineering-Prinzipien in konkrete gemeinsame Re
 - [`HELPER_USAGE.md`](HELPER_USAGE.md): Zuständigkeit und Nutzung gemeinsamer Helper
 - [`CONFIGURATION_FORM.md`](CONFIGURATION_FORM.md): statische und dynamische Konfigurationsformulare
 - [`VARIABLE_PRESENTATION.md`](VARIABLE_PRESENTATION.md): native Variablendarstellungen und Actions
+- [`SOURCE_VARIABLE_IDENTITY.md`](SOURCE_VARIABLE_IDENTITY.md): Variablen-ID als technische Identität konfigurierter Quellen
 - [`MIGRATIONS.md`](MIGRATIONS.md): kompatible, wiederholbare Modulmigrationen
 - [`README_CONTENT.md`](README_CONTENT.md): Benutzer-READMEs ohne Fehlerdiagnose und Entwicklungshinweise
 - [`CHANGELOG.md`](CHANGELOG.md): sichtbare Änderungen, Format und Versionszuordnung
