@@ -16,6 +16,11 @@ Properties, Idents, öffentliche Methoden, Statuscodes, persistierte Werte und s
 
 Wiederholtes Anwenden derselben Konfiguration darf keine Duplikate oder unnötigen Seiteneffekte erzeugen. Automatisch verwaltete Objekte haben eine klare Zuständigkeit und stabile technische Identitäten.
 
+Bei konfigurierten Quellvariablen steht die Variablen-ID als technische
+Identität an erster Stelle. Namen, Pfade und sichtbare Gruppierungen können
+gleich sein oder sich ändern, ohne Quellen zu vereinen oder zu verwerfen;
+Details regelt [`SOURCE_VARIABLE_IDENTITY.md`](../standards/SOURCE_VARIABLE_IDENTITY.md).
+
 ## 5. Eine kanonische Quelle pro gemeinsamer Fähigkeit
 
 Gemeinsame PHP-Funktionen gehören in `Symcon_ModuleHelper`, gemeinsame CI-Logik in `Symcon_ModuleCI` und gemeinsame Regeln in dieses Repository. Lokale Kopien gemeinsamer Bausteine werden nicht als Abkürzung verwendet.
