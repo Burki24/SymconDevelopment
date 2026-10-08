@@ -16,13 +16,15 @@ Variablen.
 
 ## Darstellung und fachliche Gruppierung
 
-- Sichtbare Bezeichnungen dürfen frei gewählt oder aus Variablenmetadaten
-  übernommen werden. Sie ändern die Quellenidentität nicht.
+- Ein ausdrücklich konfigurierter Anzeigename hat Vorrang. Ohne solchen Namen
+  wird der aktuelle Symcon-Name der referenzierten Variablen angezeigt.
+  Sichtbare Bezeichnungen ändern die Quellenidentität nicht.
 - Gleichlautende Bezeichnungen dürfen keine Quelle verwerfen, zusammenführen
   oder eine gültige Konfiguration ungültig machen.
-- Wenn eine Visualisierung unterscheidbare Beschriftungen benötigt, verwendet
-  sie bei Namenskollisionen die Variablen-ID als eindeutigen Zusatz. Ein
-  Objektpfad wird nicht zur Identitätsbestimmung herangezogen.
+- Variablen- und Instanz-IDs bleiben ausschließlich intern. Sie werden nicht
+  automatisch an Beschriftungen angehängt und erscheinen nicht in Ansichten.
+  Auch bei gleichen sichtbaren Namen bleiben die Quellen über ihre IDs
+  getrennt. Ein Objektpfad wird nicht zur Identitätsbestimmung herangezogen.
 - Ausdrücklich konfigurierte Kategorien oder Datenreihen können eine
   **fachliche Gruppierung** definieren. Diese Gruppierung ist von der
   technischen Identität jedes enthaltenen Variablenwerts zu trennen; auch
@@ -40,4 +42,5 @@ definierte Zuordnung; IDs werden nicht blind auf fremde Installationen
 Tests decken mindestens zwei verschiedene Variablen-IDs mit gleichem Namen
 und gleicher fachlicher Gruppierung ab. Sie prüfen, dass beide Werte getrennt
 erhalten bleiben und eine Umbenennung von Variable oder Elternobjekt die
-technische Zuordnung nicht verändert.
+technische Zuordnung nicht verändert. Sichtbare Namen enthalten keine
+automatisch ergänzten IDs; ein konfigurierter Anzeigename hat Vorrang.
