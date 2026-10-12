@@ -27,6 +27,20 @@ Dynamische Ergänzungen müssen:
 - externe Zugriffe beim bloßen Öffnen des Formulars vermeiden oder klar begrenzen;
 - Fehler als hilfreichen Formularzustand anzeigen, statt ein ungültiges Formular zurückzugeben.
 
+## Dynamische Formularbreite
+
+Formulare nutzen die verfügbare Breite der Symcon-Konsole. Übergeordnete
+Container wie `ExpansionPanel` erhalten grundsätzlich keine feste Pixelbreite;
+ohne `width` können sie sich an den verfügbaren Platz anpassen. Vorschauen und
+andere flächige Inhalte verwenden bei Bedarf eine relative Breite (zum
+Beispiel `100%`). Eine feste Breite ist nur für einzelne Bedienelemente oder
+Spalten zulässig, wenn sie deren Lesbarkeit verbessert. Begründete Ausnahmen
+für Container werden im Projekt dokumentiert.
+
+Die Breitenregel verspricht kein automatisches Umbrechen jeder Feldgruppe:
+Feldanordnung und lange Beschriftungen werden zusätzlich in schmalen und
+breiten Konsolenansichten auf Überlauf, Abschneiden und Bedienbarkeit geprüft.
+
 ## Interaktion
 
 - `visible` und `enabled` steuern ausschließlich die Bedienoberfläche; `ApplyChanges()` validiert unabhängig davon alle relevanten Properties.
@@ -51,5 +65,6 @@ Mindestens zu prüfen sind:
 - dynamische Listen und Sichtbarkeiten sind für leere und gefüllte Zustände nachvollziehbar;
 - `ApplyChanges()` weist ungültige oder unvollständige Konfiguration kontrolliert ab;
 - sichtbare Texte sind gemäß Projektkonvention lokalisierbar.
+- übergeordnete Container passen sich an schmale und breite Konsolenansichten an; Ausnahmen mit fester Breite sind begründet.
 
 API-Details und verfügbare Elemente werden über die [offiziellen Symcon-Dokumentationseinstiege](../references/symcon/README.md) nachgeschlagen. Der zentrale Helper-Vertrag ist unter [`references/Symcon_ModuleHelper.md`](../references/Symcon_ModuleHelper.md) beschrieben.
