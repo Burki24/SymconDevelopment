@@ -13,6 +13,7 @@ ADRs dokumentieren Entscheidungen, die langfristig Architektur, Kompatibilität,
 | [`0005`](0005-use-persistent-dev-main-workflow.md) | Angenommen | dauerhaftes `dev`/`main`-Branch-Modell verwenden |
 | [`0006`](0006-use-official-symcon-llms-sources.md) | Angenommen | offiziell gepflegte Symcon-`llms.txt`-Quellen direkt verwenden |
 | [`0007`](0007-user-readmes-and-changelog.md) | Angenommen | Benutzer-READMEs und Versionshistorie trennen |
+| [`0008`](0008-human-readable-debug-output.md) | Angenommen | einheitliche deutsche Debug-Ausgaben mit Ablauf- und Ergebnisbezug verwenden |
 
 ## Benennung
 

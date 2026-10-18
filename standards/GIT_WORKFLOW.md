@@ -30,6 +30,9 @@ Die Rücksynchronisierung wird nicht durch Neuanlage oder Löschen von `dev` ers
 ## Commits und Pull Requests
 
 - Commits sind thematisch geschlossen und verständlich beschrieben.
+- Commit subjects and explanatory commit bodies are always written in English.
+  Suggested commit subjects and descriptions follow the same rule, even when
+  the surrounding conversation or project documentation is in German.
 - Ein Pull Request erklärt Problem, Lösung, Auswirkungen und Prüfungen.
 - Architekturentscheidungen und notwendige Dokumentationsänderungen gehören in denselben fachlichen Zusammenhang.
 - Fehlgeschlagene oder nicht ausgeführte Prüfungen werden nicht verschwiegen.

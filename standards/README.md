@@ -17,6 +17,7 @@ Diese Dokumente übersetzen die Engineering-Prinzipien in konkrete gemeinsame Re
 ## Qualität und Zusammenarbeit
 
 - [`TESTING.md`](TESTING.md): Testziele, Ablage und Nachweise
+- [`DEBUG_OUTPUT.md`](DEBUG_OUTPUT.md): verständliche deutsche Debug-Ausgaben mit Vorgangsbezug und Schnittstellenergebnissen
 - [`CI.md`](CI.md): gemeinsame CI-Basis
 - [`GIT_WORKFLOW.md`](GIT_WORKFLOW.md): Branches, Pull Requests und Releases
 - [`PRIVATE_DATA.md`](PRIVATE_DATA.md): Geheimnisse und installationsbezogene Daten

@@ -69,6 +69,9 @@ Melde zum Abschluss, welche Prüfungen tatsächlich ausgeführt wurden und welch
 ## 5. Git und Pull Requests
 
 - Arbeite in einem zur Aufgabe passenden Branch und halte Commits thematisch fokussiert.
+- Formuliere Commit-Betreff und Commit-Erläuterung immer auf Englisch. Das gilt
+  auch für Commit-Vorschläge, die dem Benutzer zur späteren Verwendung genannt
+  werden.
 - Pull Requests für laufende Entwicklung zielen auf den dauerhaften Zweig `dev`, sofern das Projekt nichts Abweichendes festlegt.
 - `dev` bleibt nach dem Merge bestehen und wird nicht als kurzlebiger Feature-Branch behandelt oder automatisch gelöscht.
 - Committe, pushe, merge oder veröffentliche nur auf ausdrücklichen Auftrag.
