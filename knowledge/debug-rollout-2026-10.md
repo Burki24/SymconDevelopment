@@ -16,26 +16,26 @@ Der gemeinsame Ablauf liegt im neuen DebugFlowHelper des kanonischen Repositorys
 | --- | ---: | --- |
 | ShutterButtonControl | 1 | Vollständiger Testlauf erfolgreich; lange Betätigung und STOP, unveränderte Befehle und Ausfall des Debug-Kanals geprüft. |
 | Zirkulationspumpensteuerung | 2 | Vollständiger Testlauf erfolgreich; Ein-/Ausschalten, wiederholtes Einschalten und Ausschalten bei defektem Debug-Kanal geprüft. |
-| IPS_Wolf_WSR1 | 2 | Neue Debug-, Datenfluss-, Helper-, Empfangspuffer-, Visualisierungs- und Metadatentests erfolgreich. Gesamtlauf durch vorhandenen Strukturfehler blockiert, siehe unten. |
+| IPS_Wolf_WSR1 | 2 | Neue Debug-, Datenfluss-, Helper-, Empfangspuffer-, Visualisierungs- und Metadatentests erfolgreich. Regulärer Gesamtlauf nach Korrektur des Git-Dateifilters vollständig erfolgreich. |
 | IPS_Informations | 1 | Neuer lokaler Testlauf erfolgreich; unveränderte Rückgaben, Statusunterdrückung und Schutz privater Inhalte geprüft. |
 | BlindControl | 2 | Neuer lokaler Testlauf erfolgreich; Ablehnung bei inaktiver Instanz, fehlende Aktorbefehle, Aufrufpaare und geschützte Hinweise geprüft. |
 | iCal-Calendar | 1 | Vollständiger lokaler Testlauf erfolgreich; Kalenderübergabe per Referenz, Fehlerweitergabe sowie Schutz von Kalenderinhalt und ungültigen privaten Suchmustern geprüft. |
 | OpenCalendar | 4 | Vollständiger Testlauf einschließlich lokaler CalDAV-HTTP-Integration erfolgreich. |
-| OpenLMNB | 4 | Debug- und übrige Einzelprüfungen erfolgreich; Gesamtlauf durch vorhandenen Strukturmarker blockiert, siehe unten. |
+| OpenLMNB | 4 | Debug- und übrige Einzelprüfungen erfolgreich; Regulärer Gesamtlauf nach Aktualisierung des veralteten Signaturmarkers vollständig erfolgreich. |
 | SymconECharts | 30 | Vollständiger Testlauf und Projekt-Qualitätslauf erfolgreich, einschließlich PHP-, JavaScript- und Vertragsprüfungen. |
 | IPSViewAssistant | 1 | Vollständiger Testlauf erfolgreich, einschließlich neuer Diagnoseprüfungen. |
 | JSLive | 10 | Vollständiger Testlauf erfolgreich; zusätzlicher Abschlusslauf für überlange Diagnosekontexte erfolgreich. |
-| Zigbee2MQTT | 6 | Debug-Test: 4 Tests, 312 Assertions erfolgreich. Ergänzender Gesamtlauf mit dokumentiertem lokalem Loaderfilter: 329 Tests, 4788 Assertions ohne Fehler; 14 bestehende Deprecations. Regulärer Gesamtlauf siehe unten. |
+| Zigbee2MQTT | 6 | Regulärer Gesamtlauf nach Loader-Korrektur: 330 Tests, 4809 Assertions, keine Fehler; 14 bestehende Deprecations. Zusätzlicher Loader-Test prüft vollständige Modulregistrierung trotz lokalem Arbeitsordner. |
 
-Die vollständigen Läufe von elf Bibliotheken wurden zusätzlich zentral ausgeführt; bei Wolf und OpenLMNB reproduzierten sie die bekannten Fehler. Die Debug-Tests der sechs zuerst umgestellten Bibliotheken wurden unabhängig durchgesehen und ausgeführt. Dabei gefundene fehlende Ablehnungsursachen in BlindControl und private Warnlog-Inhalte in iCal wurden innerhalb des Diagnoseumfangs korrigiert und erneut geprüft. Die abschließenden JSLive- und Zigbee2MQTT-Diagnosetests wurden ebenfalls zentral ausgeführt.
+Die vollständigen Läufe von elf Bibliotheken wurden zusätzlich zentral ausgeführt; bei Wolf und OpenLMNB reproduzierten sie zunächst die bekannten Fehler. Nach deren Korrektur wurden beide regulären Gesamtläufe erneut vollständig erfolgreich ausgeführt. Die Debug-Tests der sechs zuerst umgestellten Bibliotheken wurden unabhängig durchgesehen und ausgeführt. Dabei gefundene fehlende Ablehnungsursachen in BlindControl und private Warnlog-Inhalte in iCal wurden innerhalb des Diagnoseumfangs korrigiert und erneut geprüft. Die abschließenden JSLive- und Zigbee2MQTT-Diagnosetests wurden ebenfalls zentral ausgeführt.
 
 Symcon_ModuleHelper: PHP-Testlauf, Manifestprüfung für 27 Helper, Bundle-Tests und simulierte Auto-Merge-Tests erfolgreich. Letztere führen keine tatsächlichen GitHub-Merges aus. Alle zwölf Consumer haben unveränderte Bibliotheksmetadaten und bestehen `git diff --check`; Helper und Abhängigkeiten stimmen mit der zentralen Quelle überein. PHP-Syntax der geänderten Laufzeit- und Diagnose-Dateien wurde geprüft.
 
-## Bereits vorhandene Prüfprobleme
+## Behobene Prüfblockaden (Nachprüfung am 18.10.2026)
 
-1. **IPS_Wolf_WSR1:** `tests/validate_structure.py` findet den alten Repositorynamen in `.git/config`. Der Fehler bestand bereits vor den Änderungen. Git-Konfiguration und Strukturprüfer wurden dafür nicht verändert.
-2. **OpenLMNB:** Der Strukturprüfer erwartet die genaue Signatur `VisualizationThemeCSS(): string`; der vorhandene Code verwendet bereits `VisualizationThemeCSS(array $overrides = []): string`. Der Widerspruch besteht auch im bisherigen HEAD.
-3. **Zigbee2MQTT:** Der offizielle Stub-Loader interpretiert den vorhandenen Wurzelordner `state` als Modul und erwartet `state/module.json`. Regulär entstehen dadurch 262 Ladefehler bei 329 Tests. Der zusätzliche erfolgreiche Lauf schließt nur diesen Nichtmodulordner im temporären Test-Bootstrap aus. Benutzerzustand und offizielle Stubs bleiben unverändert. Der reproduzierbare Bootstrap ist in `Zigbee2MQTT/docs/DEBUG_OUTPUT.md` dokumentiert und nach der Prüfung entfernt worden.
+1. **IPS_Wolf_WSR1:** Der Strukturprüfer durchsucht `.git` nicht mehr nach veralteten Projektbezeichnern. Projektquellen bleiben geprüft. `php tests/run.php`: Exit 0, alle Prüfungen erfolgreich.
+2. **OpenLMNB:** Der Strukturmarker entspricht nun der vorhandenen Signatur `VisualizationThemeCSS(array $overrides = []): string`. Der synchronisierte Helper bleibt unverändert. `php tests/run.php`: Exit 0, alle Prüfungen erfolgreich.
+3. **Zigbee2MQTT:** Die Test-Einstiege verwenden nun `loadSingleModule` für die sechs veröffentlichten Module statt der automatischen Verzeichnissuche von `loadLibrary`. Der neue Test prüft alle Modulmetadatenzuordnungen trotz zusätzlichem Arbeitsordner. `phpunit -c tests/phpunit.xml tests`: Exit 0, 330 Tests, 4809 Assertions, keine Fehler; 14 bestehende Deprecations. Offizielle Stubs und Benutzerzustand bleiben unverändert. Ein temporärer Namespace-Filter ist nicht mehr nötig. Die Bibliotheksmetadaten werden weiterhin durch LibraryTest validiert; der gezielte Modullader registriert sie nicht im Stub-Kernel.
 
 IPS_Informations, BlindControl und iCal besitzen außerdem bereits Formatierungsaltlasten in ihren bisherigen Quellen. Sowohl bisheriger HEAD als auch Arbeitsstand scheitern mit derselben Referenzkonfiguration. Es erfolgte keine breite Umformatierung dieser Quellen; die neuen Tests wurden geprüft und formatiert. Ein vollständig grüner Style-Lauf dieser Altbestände wird damit nicht behauptet.
 
