@@ -68,13 +68,12 @@ Melde zum Abschluss, welche Prüfungen tatsächlich ausgeführt wurden und welch
 
 ## 5. Git und Pull Requests
 
-- Arbeite in einem zur Aufgabe passenden Branch und halte Commits thematisch fokussiert.
-- Formuliere Commit-Betreff und Commit-Erläuterung immer auf Englisch. Das gilt
-  auch für Commit-Vorschläge, die dem Benutzer zur späteren Verwendung genannt
-  werden.
+- Arbeite in einem zur Aufgabe passenden Branch und bereite thematisch geschlossene Änderungen vor.
+- Commit und Push führt immer der Benutzer selbst über GitHub Desktop aus. Coding-Agenten erstellen keine Commits und führen keine Pushes aus, weder per Git-Befehl noch über Tools, APIs oder die Benutzeroberfläche. Sie fragen auch nicht nach einer Freigabe dafür.
+- Liefere nach Änderungen den zur jeweiligen Änderung passenden Commit-Betreff und die Commit-Erklärung auf Englisch als kopierbaren Text für GitHub Desktop. Die Bereitstellung dieser Texte ist kein Auftrag, Commit oder Push auszuführen.
 - Pull Requests für laufende Entwicklung zielen auf den dauerhaften Zweig `dev`, sofern das Projekt nichts Abweichendes festlegt.
 - `dev` bleibt nach dem Merge bestehen und wird nicht als kurzlebiger Feature-Branch behandelt oder automatisch gelöscht.
-- Committe, pushe, merge oder veröffentliche nur auf ausdrücklichen Auftrag.
+- Merge und Veröffentlichung erfolgen nur auf ausdrücklichen Auftrag; Commit und Push verbleiben immer beim Benutzer über GitHub Desktop.
 
 Siehe [`standards/GIT_WORKFLOW.md`](standards/GIT_WORKFLOW.md).
 

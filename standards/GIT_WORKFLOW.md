@@ -29,14 +29,14 @@ Die Rücksynchronisierung wird nicht durch Neuanlage oder Löschen von `dev` ers
 
 ## Commits und Pull Requests
 
-- Commits sind thematisch geschlossen und verständlich beschrieben.
-- Commit subjects and explanatory commit bodies are always written in English.
-  Suggested commit subjects and descriptions follow the same rule, even when
-  the surrounding conversation or project documentation is in German.
+- Commit und Push führt immer der Benutzer selbst über GitHub Desktop aus.
+- Coding-Agenten bereiten Änderungen und deren Prüfung vor, erstellen aber keine Commits und führen keine Pushes aus. Das gilt für Git-Befehle ebenso wie für Tools, APIs und die Benutzeroberfläche. Eine Freigabe für Commit oder Push wird nicht angefragt.
+- Nach Änderungen liefert der Coding-Agent ausschließlich die Commit-Texte zur manuellen Verwendung in GitHub Desktop: einen passenden Commit-Betreff (Summary) und eine Commit-Erklärung (Description), beide auf Englisch und getrennt kopierbar. Das gilt auch bei deutschsprachiger Unterhaltung oder Dokumentation. Erforderliche Ergebnis- und Prüfberichte bleiben davon unberührt.
+- Die vorgeschlagenen Commit-Texte beschreiben einen thematisch geschlossenen Änderungsumfang. Ihre Bereitstellung berechtigt den Coding-Agenten nicht zur Ausführung von Commit oder Push.
 - Ein Pull Request erklärt Problem, Lösung, Auswirkungen und Prüfungen.
 - Architekturentscheidungen und notwendige Dokumentationsänderungen gehören in denselben fachlichen Zusammenhang.
 - Fehlgeschlagene oder nicht ausgeführte Prüfungen werden nicht verschwiegen.
-- Merge, Push, Tagging, Release und Veröffentlichung erfolgen nur mit entsprechender Berechtigung und ausdrücklichem Auftrag.
+- Merge, Tagging, Release und Veröffentlichung erfolgen nur mit entsprechender Berechtigung und ausdrücklichem Auftrag. Commit und Push verbleiben immer beim Benutzer über GitHub Desktop.
 
 ## Konflikte und Abweichungen
 
