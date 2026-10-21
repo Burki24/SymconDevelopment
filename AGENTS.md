@@ -86,3 +86,5 @@ Führe keine SAEF-spezifischen Deployment-Frameworks, Runtime-Mirrors, Filesets,
 ## 7. Zugriff auf Symcon-Systeme
 
 Zugriffe auf Entwicklungs- und Produktivinstanzen folgen [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md). Serverrollen und erlaubter Umfang werden projektspezifisch festgelegt; die bloße Verfügbarkeit eines Connectors erlaubt keine Installation, Reloads oder Änderungen am laufenden System.
+
+Bei Browserprüfungen von Symcon-MCP-Kachelvorschauen zuerst einen leeren Tab öffnen, dann zur Vorschau navigieren und den sichtbaren Ladeabschluss prüfen. Erst danach Accessibility-/DOM-Abfragen ausführen. Vorschau-URLs nicht direkt an die Tab-Erstellung übergeben. Details und Grenzen stehen in [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md#browserpruefung-von-mcp-kachelvorschauen).
