@@ -40,7 +40,7 @@ Es wird nur der für die konkrete Aufgabe benötigte Kontext geladen. Die offizi
 2. Wiederholt sich das Muster oder ist es erkennbar projektübergreifend, wird es als Knowledge-Artikel festgehalten.
 3. Entsteht daraus eine verbindliche Regel, wird der passende Standard geändert.
 4. Verändert die Regel langfristig Architektur oder Zuständigkeiten, wird zusätzlich ein ADR erstellt.
-5. Wiederverwendbarer PHP-Code gehört nur bei geklärtem Vertrag und mehreren realen Anwendungsfällen in `Symcon_ModuleHelper`.
+5. Funktionen, die mehrere Module benötigen, werden mit geklärtem Vertrag zentral in `Symcon_ModuleHelper` umgesetzt und von den betroffenen Modulen eingebunden. Vor jeder Umsetzung sind die vorhandenen Helper zu prüfen.
 
 So wächst die Basis aus belegter Praxis und nicht aus vorsorglich erfundenen Abstraktionen.
 
@@ -48,7 +48,7 @@ So wächst die Basis aus belegter Praxis und nicht aus vorsorglich erfundenen Ab
 
 Die ausführbaren Bausteine verbleiben in ihren zuständigen Repositories:
 
-- `Symcon_ModuleHelper` besitzt gemeinsame PHP-Helper.
+- `Symcon_ModuleHelper` besitzt gemeinsame Modulfunktionen einschließlich PHP-Helpern und wiederverwendbaren Visualisierungs- und Layoutbausteinen in HTML, CSS und JavaScript.
 - `Symcon_ModuleCI` besitzt die gemeinsame CI-Basis.
 - Modul-Repositories besitzen ihre fachliche Implementierung, Tests und projektspezifischen Entscheidungen.
 

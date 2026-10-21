@@ -7,7 +7,7 @@ Diese Datei ist die gemeinsame Basis für Repositories, die ausdrücklich auf si
 1. Lies die lokale `AGENTS.md`, dieses zentrale Regelwerk, [`ARCHITECTURE.md`](ARCHITECTURE.md) und die zentralen [`principles/`](principles/).
 2. Lies den vorhandenen Projektkontext, relevante ADRs und die für die Aufgabe benötigten Dokumente unter `standards/`.
 3. Lies die vorhandene Architektur, insbesondere `README.md`, `library.json`, betroffene `module.json`-Dateien, Modul-READMEs, Helper, Tests und CI-Konfiguration.
-4. Suche nach vorhandenen Funktionen und vergleichbaren Modulen, bevor du neue Abstraktionen, Dateien oder Helper einführst.
+4. Prüfe vor jeder Umsetzung die aufgabenrelevanten vorhandenen Helper in `Symcon_ModuleHelper`, ihre Verträge und ihre Verwendung in bestehenden Modulen. Suche außerdem nach vergleichbaren Implementierungen. Diese Prüfung ist verpflichtend und erfolgt vor Beginn der Implementierung.
 5. Prüfe den Arbeitsbaum und erhalte fremde oder nicht zur Aufgabe gehörende Änderungen.
 6. Grenze Ziel, betroffene Dateien, Kompatibilitätsanforderungen und passende Nachweise ein.
 
@@ -27,8 +27,10 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
   keine technischen Ersatzschlüssel.
 - Native Variablendarstellungen und kompatible Legacy-Profile folgen [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md).
 - Persistente Änderungen an veröffentlichten Verträgen folgen [`standards/MIGRATIONS.md`](standards/MIGRATIONS.md).
-- Bevorzuge `Symcon_ModuleHelper` und andere bereits eingebundene zentrale Funktionen.
-- Erzeuge keine lokalen Kopien zentraler Helper. Fehlt eine allgemein nutzbare Funktion, prüfe zuerst eine Ergänzung im zuständigen Helper-Repository als separate Änderung.
+- Verwende passende vorhandene Helper aus `Symcon_ModuleHelper`; erweitere sie bei Bedarf unter Beachtung ihrer bestehenden Verträge.
+- Funktionen, die mehrere Module benötigen, müssen zentral in `Symcon_ModuleHelper` umgesetzt werden. Das umfasst auch gemeinsame Visualisierungs- und Layoutlogik sowie zugehörige HTML-, CSS- und JavaScript-Bausteine.
+- Die zentrale Umsetzung und die Einbindung in die betroffenen Module gehören zum selben Arbeitspaket. Erzeuge keine lokalen Kopien oder parallelen Implementierungen gemeinsamer Funktionen und verschiebe ihre Zentralisierung nicht auf einen späteren Schritt.
+- Pflege bei Änderungen an gemeinsamen Helpern die zugehörigen Verträge, Tests, Dokumentation und die nach dem jeweiligen Repository-Verfahren eingebundenen Helper-Dateien.
 - Konfiguration und Migrationen müssen bei wiederholter Ausführung sicher sein und dürfen keine unnötigen Seiteneffekte erzeugen.
 - Halte private Installationsdaten und Geheimnisse aus Repository, Beispielen, Logs und Diagnosedaten heraus; maßgeblich ist [`standards/PRIVATE_DATA.md`](standards/PRIVATE_DATA.md).
 
