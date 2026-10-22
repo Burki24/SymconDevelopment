@@ -73,6 +73,7 @@ Melde zum Abschluss, welche Prüfungen tatsächlich ausgeführt wurden und welch
 ## 5. Git und Pull Requests
 
 - Arbeite in einem zur Aufgabe passenden Branch und bereite thematisch geschlossene Änderungen vor.
+- Lokale Helper-Teststände dürfen den Pull automatisch verteilter Helper nicht blockieren. Vor der Übergabe sind sie nach [`standards/HELPER_USAGE.md`](standards/HELPER_USAGE.md#lokale-testbundles-und-automatische-verteilung) zu sichern, mit der verteilten Version abzugleichen und gezielt zu bereinigen; fachliche Moduländerungen und fremde Arbeit bleiben erhalten.
 - Commit und Push führt immer der Benutzer selbst über GitHub Desktop aus. Coding-Agenten erstellen keine Commits und führen keine Pushes aus, weder per Git-Befehl noch über Tools, APIs oder die Benutzeroberfläche. Sie fragen auch nicht nach einer Freigabe dafür.
 - Liefere nach Änderungen den zur jeweiligen Änderung passenden Commit-Betreff und die Commit-Erklärung auf Englisch als kopierbaren Text für GitHub Desktop. Die Bereitstellung dieser Texte ist kein Auftrag, Commit oder Push auszuführen.
 - Pull Requests für laufende Entwicklung zielen auf den dauerhaften Zweig `dev`, sofern das Projekt nichts Abweichendes festlegt.

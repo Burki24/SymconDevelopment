@@ -27,6 +27,10 @@ Die Rücksynchronisierung wird nicht durch Neuanlage oder Löschen von `dev` ers
 4. Führe die betroffenen Tests sowie Style- und Strukturprüfungen aus.
 5. Prüfe den vollständigen Diff auf versehentliche Änderungen, Secrets und generierte Dateien.
 
+### Automatisch verteilte Helper vor dem Modul-Commit
+
+Lokale Helper-Testkopien dürfen nicht als konkurrierender Stand zum automatischen Helper-Sync im Arbeitsbaum verbleiben. Vor einem erforderlichen Pull gilt der verbindliche Ablauf unter [`HELPER_USAGE.md`](HELPER_USAGE.md#lokale-testbundles-und-automatische-verteilung): sichern, mit dem eingehenden Paket vergleichen, nur belegte redundante Teständerungen entfernen und alle übrigen Änderungen erhalten. Der Benutzer pullt den regulären Helper-Stand über GitHub Desktop, bevor er die darauf aufbauenden Moduländerungen committet und pusht. Ein pauschales Stash oder Verwerfen der Moduländerungen ersetzt diesen Abgleich nicht.
+
 ## Commits und Pull Requests
 
 - Commit und Push führt immer der Benutzer selbst über GitHub Desktop aus.
