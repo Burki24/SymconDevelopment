@@ -88,3 +88,5 @@ Führe keine SAEF-spezifischen Deployment-Frameworks, Runtime-Mirrors, Filesets,
 Zugriffe auf Entwicklungs- und Produktivinstanzen folgen [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md). Serverrollen und erlaubter Umfang werden projektspezifisch festgelegt; die bloße Verfügbarkeit eines Connectors erlaubt keine Installation, Reloads oder Änderungen am laufenden System.
 
 Bei Browserprüfungen von Symcon-MCP-Kachelvorschauen zuerst einen leeren Tab öffnen, dann zur Vorschau navigieren und den sichtbaren Ladeabschluss prüfen. Erst danach Accessibility-/DOM-Abfragen ausführen. Vorschau-URLs nicht direkt an die Tab-Erstellung übergeben. Details und Grenzen stehen in [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md#browserpruefung-von-mcp-kachelvorschauen).
+
+Für MCP-Wiederverbindungsprüfungen gilt zusätzlich der Ablauf unter [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md#mcp-wiederverbindungspruefungen): erwartete Transportfehler der Testinstrumentierung abfangen, Ausfall und Wiederanlauf belegen und den Zustand vor und nach der Wiederverbindung vergleichen. Ein Timeout der Browsersteuerung ist kein Nachweis eines Modulfehlers.
