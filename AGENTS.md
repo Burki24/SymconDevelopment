@@ -64,6 +64,8 @@ Nutze zuerst die vom Zielrepository dokumentierten Befehle und Konfigurationen. 
 - `validate_structure`;
 - weitere projektbezogene Prüfungen aus CI oder `composer.json`.
 
+Bei jedem Modul mit Kachel-/IPSView-Ausgabe muss die Mausrad- und Scrollbedienung nach [`standards/TESTING.md`](standards/TESTING.md#mausrad-und-scrollbedienung-von-visualisierungen) ausdrücklich geprüft werden. Festgestellte Bedienfehler gehören zur Korrektur, bevor die betroffene Ausgabe als fertig gemeldet wird; ein fehlender Praxisnachweis wird sichtbar als offen dokumentiert. Gemeinsame Lösungen gehören in `Symcon_ModuleHelper`.
+
 Die gemeinsame CI-Basis ist `Symcon_ModuleCI` v1.0.0. Details stehen in [`standards/CI.md`](standards/CI.md) und [`standards/TESTING.md`](standards/TESTING.md).
 
 Melde zum Abschluss, welche Prüfungen tatsächlich ausgeführt wurden und welche nicht. Ein grüner Formatierungscheck ersetzt keine Verhaltensprüfung.
