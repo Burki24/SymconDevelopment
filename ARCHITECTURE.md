@@ -40,7 +40,7 @@ Es wird nur der für die konkrete Aufgabe benötigte Kontext geladen. Die offizi
 2. Wiederholt sich das Muster oder ist es erkennbar projektübergreifend, wird es als Knowledge-Artikel festgehalten.
 3. Entsteht daraus eine verbindliche Regel, wird der passende Standard geändert.
 4. Verändert die Regel langfristig Architektur oder Zuständigkeiten, wird zusätzlich ein ADR erstellt.
-5. Funktionen, die mehrere Module benötigen, werden mit geklärtem Vertrag zentral in `Symcon_ModuleHelper` umgesetzt und von den betroffenen Modulen eingebunden. Vor jeder Umsetzung sind die vorhandenen Helper zu prüfen.
+5. Helper werden mit geklärtem Vertrag genau dann nach `Symcon_ModuleHelper` verschoben, wenn mindestens zwei verschiedene Libraries sie tatsächlich verwenden. Bis dahin verbleiben sie in ihrer Library; mehrere dortige Module oder nur geplante Nutzer erfüllen diese Voraussetzung nicht. Vor jeder Umsetzung sind die vorhandenen Helper zu prüfen.
 
 So wächst die Basis aus belegter Praxis und nicht aus vorsorglich erfundenen Abstraktionen.
 

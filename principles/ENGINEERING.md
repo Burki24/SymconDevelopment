@@ -23,7 +23,7 @@ Details regelt [`SOURCE_VARIABLE_IDENTITY.md`](../standards/SOURCE_VARIABLE_IDEN
 
 ## 5. Eine kanonische Quelle pro gemeinsamer Fähigkeit
 
-Vor jeder Umsetzung werden die aufgabenrelevanten vorhandenen Helper in `Symcon_ModuleHelper` und ihre Verträge geprüft und passende Funktionen wiederverwendet. Funktionen, die mehrere Module benötigen, müssen zentral in `Symcon_ModuleHelper` umgesetzt werden; dies umfasst auch gemeinsame Visualisierungs- und Layoutbausteine in HTML, CSS und JavaScript. Zentralisierung und Einbindung in die betroffenen Module erfolgen im selben Arbeitspaket. Lokale Kopien und parallele Implementierungen gemeinsamer Bausteine sind nicht zulässig. Gemeinsame CI-Logik gehört in `Symcon_ModuleCI` und gemeinsame Regeln in dieses Repository.
+Vor jeder Umsetzung werden die aufgabenrelevanten vorhandenen Helper in `Symcon_ModuleHelper` und ihre Verträge geprüft und passende Funktionen wiederverwendet. Ein Helper wird erst bei tatsächlicher Nutzung in mindestens zwei verschiedenen Libraries in `Symcon_ModuleHelper` zentralisiert. Mehrere Module derselben Library oder lediglich denkbare weitere Nutzer reichen nicht. Bis dahin gehören Implementierung, Tests und Ressourcen in die jeweilige Library. Dies gilt auch für Visualisierungs- und Layoutbausteine in HTML, CSS und JavaScript. Zentralisierung und Einbindung in die betroffenen Module erfolgen im selben Arbeitspaket. Lokale Kopien und parallele Implementierungen gemeinsamer Bausteine sind nicht zulässig. Gemeinsame CI-Logik gehört in `Symcon_ModuleCI` und gemeinsame Regeln in dieses Repository.
 
 ## 6. Kleine, nachvollziehbare Änderungen
 

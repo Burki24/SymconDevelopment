@@ -4,14 +4,27 @@
 
 Vor einer neuen lokalen Hilfsfunktion wird geprüft, ob `Symcon_ModuleHelper` oder ein vorhandener Baustein unter `libs/helper` die Aufgabe bereits erfüllt. Wiederverwendung ist der Standard; lokale Duplikate zentraler Helper sind nicht zulässig.
 
+Die Grenze für einen neuen zentralen Helper ist die **tatsächliche Nutzung in
+mindestens zwei verschiedenen Libraries**. Mehrere Module derselben Library
+zählen als eine Library. Generische Benennung, theoretische Wiederverwendbarkeit,
+Zukunftsfähigkeit oder geplante Integration begründen keine Zentralisierung.
+
+Bei nur einer nutzenden Library bleiben Implementierung, Tests, Übersetzungen
+und Ressourcen in deren Repository (z. B. projektspezifischer Code unter `libs`
+und die Visualisierungsressourcen beim Modul). `libs/helper` enthält weiterhin
+nur unveränderte, regulär verteilte zentrale Helper. Sobald eine zweite Library
+denselben Baustein tatsächlich einbindet, wird die gemeinsame Fähigkeit mit ihren
+Ressourcen zentralisiert und in beiden Libraries über den regulären Sync genutzt.
+Vorher werden keine gleichartigen Kopien über mehrere Libraries verteilt.
+
 ## Entscheidungsfolge
 
 1. Suche im betroffenen Modul und Repository nach bestehendem Verhalten.
 2. Prüfe die eingebundene Version und API von `Symcon_ModuleHelper`.
 3. Prüfe vergleichbare Burki24-Module auf eine freigegebene Nutzung.
 4. Verwende die bestehende Funktion, wenn ihr Vertrag passt.
-5. Fehlt eine allgemein nutzbare Funktion, schlage eine getrennte Ergänzung im zuständigen Helper-Repository vor.
-6. Implementiere lokal nur dann, wenn die Logik wirklich modulspezifisch ist; benenne und teste diese fachliche Zuständigkeit klar.
+5. Fehlt die Funktion, erfasse ihre tatsächlich nutzenden Libraries. Bei nur einer Library wird sie dort implementiert und getestet, auch wenn ihr Vertrag generisch sein kann.
+6. Bei mindestens zwei verschiedenen nutzenden Libraries wird der Baustein samt Tests, Übersetzungen und Ressourcen zentral in `Symcon_ModuleHelper` umgesetzt und in beiden Libraries im selben Arbeitspaket eingebunden.
 
 ## Keine Duplikate
 

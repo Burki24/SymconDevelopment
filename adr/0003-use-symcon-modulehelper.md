@@ -19,7 +19,7 @@ Mehrere Burki24-Module benötigen dieselben Funktionen für Konfigurationsformul
 - Consumer verwenden die freigegebenen Dateien unter `libs/helper`.
 - Synchronisierte Helper werden im Consumer nicht lokal verändert oder dupliziert.
 - Vor einer neuen lokalen Hilfsfunktion wird der vorhandene Helper-Vertrag geprüft.
-- Eine neue zentrale Fähigkeit benötigt einen generischen Vertrag und mehrere reale Anwendungsfälle oder eine ausdrücklich beschlossene zentrale Zuständigkeit.
+- Eine neue zentrale Fähigkeit benötigt einen generischen Vertrag und tatsächliche Nutzung in mindestens zwei verschiedenen Libraries. Mehrere Module derselben Library oder nur vorgesehene weitere Nutzer genügen nicht; bis dahin verbleibt der Baustein samt Tests und Ressourcen in seiner Library (Präzisierung der Nutzerfestlegung vom 2026-10-23).
 - Geräte-, Provider- und Modulfachlogik verbleibt im zuständigen Projekt.
 - Änderungen an öffentlichen Helper-Verträgen werden gemeinsam mit Dokumentation, Tests, Version und Consumer-Auswirkungen bewertet.
 
