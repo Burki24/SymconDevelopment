@@ -34,9 +34,12 @@ hierzu noch nicht vor.
 
 Das aktuell dokumentierte HTML-SDK bietet mit `SetVisualizationType()` und
 `GetVisualizationTile()` eine individuelle HTML-Darstellung je Instanz.
-SymconiCloud Anwesenheit bietet deshalb vorerst einen lokalen Umschalter
-innerhalb dieser Kachel. Die Designer-Auswahl bleibt die Startvorgabe;
-Geräteauswahl und Scrollposition sind beim Umschalten zu erhalten.
+Für SymconiCloud Anwesenheit hat der Benutzer nach erfolgreicher Erprobung
+des lokalen Umschalters ausdrücklich festgelegt: Keine Varianten-Schaltflächen
+in der Kachel selbst. Bis zur nativen Unterstützung erfolgt die Auswahl
+ausschließlich im Kacheldesigner. Lokale Sitzungsvorgaben dürfen diese Auswahl
+nicht überschreiben. Geräteauswahl und Scrollposition bleiben bei Datenupdates
+erhalten.
 
 **Bei Zustimmung und Umsetzung durch Symcon ist diese Zwischenlösung erneut
 zu prüfen und auf die native Variantenwahl umzustellen**, soweit die neue
