@@ -32,6 +32,10 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
   ausschließlich durch ihre Variablen-ID identifiziert; Namen und Pfade sind
   keine technischen Ersatzschlüssel.
 - Native Variablendarstellungen und kompatible Legacy-Profile folgen [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md).
+- Der an Symcon gesendete Wunsch nach mehreren instanzspezifischen
+  Kacheldarstellungen und die Pflicht zur Neubewertung nach dessen Zustimmung
+  und Umsetzung sind in [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md#offener-symcon-wunsch-mehrere-instanzspezifische-kacheldarstellungen)
+  festgehalten.
 - Persistente Änderungen an veröffentlichten Verträgen folgen [`standards/MIGRATIONS.md`](standards/MIGRATIONS.md).
 - Verwende passende vorhandene Helper aus `Symcon_ModuleHelper`; erweitere sie bei Bedarf unter Beachtung ihrer bestehenden Verträge.
 - Ein Helper wird genau dann in `Symcon_ModuleHelper` zentralisiert, wenn er tatsächlich von mindestens zwei verschiedenen Libraries verwendet wird. Mehrere Module derselben Library zählen nicht als mehrere Libraries. Bloße Wiederverwendbarkeit, Zukunftsfähigkeit oder geplante Nutzung genügen nicht. Bis dahin verbleiben Code, Tests und Ressourcen im zuständigen Library-Repository; `libs/helper` bleibt den regulär verteilten zentralen Helpern vorbehalten. Dies gilt auch für Visualisierungs- und Layoutlogik mit HTML, CSS und JavaScript.

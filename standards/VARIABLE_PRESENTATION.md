@@ -23,6 +23,31 @@ Wenn `Symcon_ModuleHelper` im Projekt eingebunden ist, werden passende Methoden 
 - Neue zentrale Methoden benötigen einen generischen Vertrag und mehrere reale Anwendungsfälle.
 - Übersetzbare Beschriftungen werden vom aufrufenden Modul nach dessen Lokalisierungskonzept bereitgestellt.
 
+## Offener Symcon-Wunsch: mehrere instanzspezifische Kacheldarstellungen
+
+Der Benutzer hat am 24.10.2026 den Wunsch an Symcon gesendet, mehrere benannte
+HTML-Darstellungen derselben Instanz direkt im nativen Kachelauswahldialog
+anzubieten, beispielsweise **Widget** und **WidgetCompact** nebeneinander.
+Dies ist eine Benutzerangabe zum versendeten Wunsch, keine bestätigte Zusage
+oder bereits verfügbare Funktion von Symcon. Ein Ticket-/Forum-Link liegt
+hierzu noch nicht vor.
+
+Das aktuell dokumentierte HTML-SDK bietet mit `SetVisualizationType()` und
+`GetVisualizationTile()` eine individuelle HTML-Darstellung je Instanz.
+SymconiCloud Anwesenheit bietet deshalb vorerst einen lokalen Umschalter
+innerhalb dieser Kachel. Die Designer-Auswahl bleibt die Startvorgabe;
+Geräteauswahl und Scrollposition sind beim Umschalten zu erhalten.
+
+**Bei Zustimmung und Umsetzung durch Symcon ist diese Zwischenlösung erneut
+zu prüfen und auf die native Variantenwahl umzustellen**, soweit die neue
+Schnittstelle dies auf den unterstützten Symcon-Versionen ermöglicht.
+Vor der Umstellung die tatsächlichen SDK-Verträge, Mindestversion,
+Kompatibilität gespeicherter Kacheln und Erhalt des Anzeigezustands prüfen.
+Bis dahin keine zweite native Darstellung als bereits unterstützt ausgeben.
+
+Quellen: [SetVisualizationType](https://www.symcon.de/de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/module/setvisualizationtype/)
+und [GetVisualizationTile](https://www.symcon.de/de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/module/getvisualizationtile/).
+
 ## Lebenszyklus
 
 - Dauerhaft vorhandene Variablen werden nach der vorhandenen Modulkonvention registriert.
