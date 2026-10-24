@@ -23,6 +23,37 @@ Alle Tests liegen unter `tests`; `.tests` wird nicht verwendet. Tests sichern be
 
 Die konkrete Testtiefe richtet sich nach dem Risiko. Reine Struktur- oder Dokumentationsänderungen benötigen keine künstlichen Verhaltenstests, wohl aber die einschlägigen Struktur- und Formatprüfungen.
 
+## Designer-Farbkarten und Lokalisierung
+
+Bei neuen oder überarbeiteten Farbdesignern gelten die Vorgaben aus
+[CONFIGURATION_FORM.md](CONFIGURATION_FORM.md#farbzuordnung-in-kachel--und-ipsview-designern).
+Mindestens zu prüfen sind:
+
+- Beispielgrafik und Legende sind im richtigen Designer eingebunden und erklären
+  die tatsächlich verwendeten Farbrollen aller betroffenen Varianten.
+- Motiv, Aufbau, Elemente und Zustände entsprechen dem zugehörigen Modul und
+  dessen tatsächlicher Kachel-/IPSView-HTML-Ausgabe. Jede Markierung wird mit den
+  dort verwendeten HTML-/CSS-Farbzuordnungen abgeglichen. Eine unveränderte
+  Fremdmodul-Grafik mit lediglich umbenannter Legende erfüllt die Vorgabe nicht.
+  Änderungen an der Ausgabe schließen die Prüfung der zugehörigen Grafik ein.
+- Deutsche Beschriftungen stimmen exakt mit den deutschen Designerfeldern
+  überein. Weitere unterstützte Sprachen verwenden ebenfalls ihre passenden
+  Feldnamen. Technische Namen bleiben Zusatzinformationen.
+- Vertragsprüfungen gleichen vorbereitete Grafikbeschriftungen und Textlegenden
+  mit den maßgeblichen Übersetzungskatalogen ab. Bei separat gespeicherter
+  SVG-Quelle und Data-URI müssen beide inhaltlich identisch sein.
+- Die gerenderte Grafik ist lesbar, wird nicht abgeschnitten und erklärt
+  abgeleitete/nicht verwendete Farben korrekt. Schematische Farben sind klar
+  von einer Live-Vorschau unterschieden; Hell-/Dunkelstile ändern die Zuordnung
+  nicht. Bildressourcen laden weder aktive Skripte noch externe Inhalte.
+- Die Anzeige wird im echten Konsolenformular abgenommen. Ein lokaler Render
+  bestätigt die Grafik, ersetzt aber keine Formularabnahme. Benutzerbestätigung
+  und eigener MCP-/Browsernachweis werden im Projektkontext getrennt benannt.
+
+Die bestehenden Mausrad-/Scrollprüfungen bleiben bei betroffenen Formularen und
+Visualisierungen zusätzlich erforderlich. Prüfungen und Benutzerabnahmen einer
+Library gelten nicht automatisch für andere Libraries.
+
 ## Mausrad- und Scrollbedienung von Visualisierungen
 
 Diese Prüfung ist bei jedem Modul mit Kachel- oder IPSView-Ausgabe verbindlich: bei neuen Ausgaben und bei Änderungen an Visualisierung, Designer, Layout, Einbettung oder den dafür verwendeten Helpern. Bereits bestandene Prüfungen anderer Module ersetzen den Nachweis im betroffenen Modul nicht.

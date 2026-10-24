@@ -21,6 +21,12 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
 - Tests liegen unter `tests`, nicht unter `.tests`.
 - Jede Bibliothek und jedes veröffentlichte Modul besitzen eine gepflegte Benutzer-`README.md` nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md). Fehlerdiagnose und Entwicklungshinweise gehören in die interne Projektdokumentation.
 - Konfigurationsformulare folgen [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md).
+- Kachel- und IPSView-Designer mit Farboptionen enthalten eine beschriftete
+  Farbkarte samt Legende, angepasst an das konkrete Modul und dessen tatsächliche
+  Kachel-/IPSView-HTML-Ausgabe. Bild und Legende verwenden dieselben lokalisierten
+  Feldnamen wie der Designer; technische Namen sind nur Ergänzungen. Dies gilt
+  für alle Module und Libraries; Details und Bestandsüberarbeitung stehen in
+  [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md#farbzuordnung-in-kachel--und-ipsview-designern).
 - Konfigurierte Quellvariablen werden gemäß
   [`standards/SOURCE_VARIABLE_IDENTITY.md`](standards/SOURCE_VARIABLE_IDENTITY.md)
   ausschließlich durch ihre Variablen-ID identifiziert; Namen und Pfade sind
