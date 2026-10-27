@@ -16,6 +16,7 @@ Knowledge-Artikel sind keine verbindlichen Standards und keine Ersatz-ADRs. Änd
 | [`runtime-diagnostics.md`](runtime-diagnostics.md) | Entwurf | begrenzte Diagnosezustände ohne neuen Helper-Vertrag |
 | [`strict-module-helper-compatibility.md`](strict-module-helper-compatibility.md) | Dokumentationsgeprüft | Basisklassen-Verträge und projektspezifische Strict-Kompatibilität |
 | [`stub-loader-root-directories.md`](stub-loader-root-directories.md) | Quelltextgeprüft | zusätzliche Wurzelordner beim Laden einer Bibliothek durch Symcon-Stubs |
+| [`debug-rollout-2026-10.md`](debug-rollout-2026-10.md) | Lokal geprüft | OHA-Debug-Aufbau in 64 weiteren Modulen, Nachweise und Abnahmegrenzen |
 
 ## Anforderungen an einen Artikel
 

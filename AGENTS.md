@@ -7,7 +7,7 @@ Diese Datei ist die gemeinsame Basis für Repositories, die ausdrücklich auf si
 1. Lies die lokale `AGENTS.md`, dieses zentrale Regelwerk, [`ARCHITECTURE.md`](ARCHITECTURE.md) und die zentralen [`principles/`](principles/).
 2. Lies den vorhandenen Projektkontext, relevante ADRs und die für die Aufgabe benötigten Dokumente unter `standards/`.
 3. Lies die vorhandene Architektur, insbesondere `README.md`, `library.json`, betroffene `module.json`-Dateien, Modul-READMEs, Helper, Tests und CI-Konfiguration.
-4. Suche nach vorhandenen Funktionen und vergleichbaren Modulen, bevor du neue Abstraktionen, Dateien oder Helper einführst.
+4. Prüfe vor jeder Umsetzung die aufgabenrelevanten vorhandenen Helper in `Symcon_ModuleHelper`, ihre Verträge und ihre Verwendung in bestehenden Modulen. Suche außerdem nach vergleichbaren Implementierungen. Diese Prüfung ist verpflichtend und erfolgt vor Beginn der Implementierung.
 5. Prüfe den Arbeitsbaum und erhalte fremde oder nicht zur Aufgabe gehörende Änderungen.
 6. Grenze Ziel, betroffene Dateien, Kompatibilitätsanforderungen und passende Nachweise ein.
 
@@ -20,15 +20,28 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
 - Gemeinsamer Code liegt unter `libs/helper`, nicht unter `.shared`.
 - Tests liegen unter `tests`, nicht unter `.tests`.
 - Jede Bibliothek und jedes veröffentlichte Modul besitzen eine gepflegte Benutzer-`README.md` nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md). Fehlerdiagnose und Entwicklungshinweise gehören in die interne Projektdokumentation.
+- Jede Library-README enthält die Pflicht-Badges für Symcon/PHPModul, unterstützte Symcon-Version, tatsächliche Lizenz sowie den dynamischen Status von Check Style und Tests. Repository, Workflow und Branch müssen zur jeweiligen Library passen; siehe [`standards/README_CONTENT.md`](standards/README_CONTENT.md#pflicht-badges-in-library-readmes).
 - Konfigurationsformulare folgen [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md).
+- Kachel- und IPSView-Designer mit Farboptionen enthalten eine beschriftete
+  Farbkarte samt Legende, angepasst an das konkrete Modul und dessen tatsächliche
+  Kachel-/IPSView-HTML-Ausgabe. Bild und Legende verwenden dieselben lokalisierten
+  Feldnamen wie der Designer; technische Namen sind nur Ergänzungen. Dies gilt
+  für alle Module und Libraries; Details und Bestandsüberarbeitung stehen in
+  [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md#farbzuordnung-in-kachel--und-ipsview-designern).
 - Konfigurierte Quellvariablen werden gemäß
   [`standards/SOURCE_VARIABLE_IDENTITY.md`](standards/SOURCE_VARIABLE_IDENTITY.md)
   ausschließlich durch ihre Variablen-ID identifiziert; Namen und Pfade sind
   keine technischen Ersatzschlüssel.
 - Native Variablendarstellungen und kompatible Legacy-Profile folgen [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md).
+- Der an Symcon gesendete Wunsch nach mehreren instanzspezifischen
+  Kacheldarstellungen und die Pflicht zur Neubewertung nach dessen Zustimmung
+  und Umsetzung sind in [`standards/VARIABLE_PRESENTATION.md`](standards/VARIABLE_PRESENTATION.md#offener-symcon-wunsch-mehrere-instanzspezifische-kacheldarstellungen)
+  festgehalten.
 - Persistente Änderungen an veröffentlichten Verträgen folgen [`standards/MIGRATIONS.md`](standards/MIGRATIONS.md).
-- Bevorzuge `Symcon_ModuleHelper` und andere bereits eingebundene zentrale Funktionen.
-- Erzeuge keine lokalen Kopien zentraler Helper. Fehlt eine allgemein nutzbare Funktion, prüfe zuerst eine Ergänzung im zuständigen Helper-Repository als separate Änderung.
+- Verwende passende vorhandene Helper aus `Symcon_ModuleHelper`; erweitere sie bei Bedarf unter Beachtung ihrer bestehenden Verträge.
+- Ein Helper wird genau dann in `Symcon_ModuleHelper` zentralisiert, wenn er tatsächlich von mindestens zwei verschiedenen Libraries verwendet wird. Mehrere Module derselben Library zählen nicht als mehrere Libraries. Bloße Wiederverwendbarkeit, Zukunftsfähigkeit oder geplante Nutzung genügen nicht. Bis dahin verbleiben Code, Tests und Ressourcen im zuständigen Library-Repository; `libs/helper` bleibt den regulär verteilten zentralen Helpern vorbehalten. Dies gilt auch für Visualisierungs- und Layoutlogik mit HTML, CSS und JavaScript.
+- Die zentrale Umsetzung und die Einbindung in die betroffenen Module gehören zum selben Arbeitspaket. Erzeuge keine lokalen Kopien oder parallelen Implementierungen gemeinsamer Funktionen und verschiebe ihre Zentralisierung nicht auf einen späteren Schritt.
+- Pflege bei Änderungen an gemeinsamen Helpern die zugehörigen Verträge, Tests, Dokumentation und die nach dem jeweiligen Repository-Verfahren eingebundenen Helper-Dateien.
 - Konfiguration und Migrationen müssen bei wiederholter Ausführung sicher sein und dürfen keine unnötigen Seiteneffekte erzeugen.
 - Halte private Installationsdaten und Geheimnisse aus Repository, Beispielen, Logs und Diagnosedaten heraus; maßgeblich ist [`standards/PRIVATE_DATA.md`](standards/PRIVATE_DATA.md).
 
@@ -62,16 +75,23 @@ Nutze zuerst die vom Zielrepository dokumentierten Befehle und Konfigurationen. 
 - `validate_structure`;
 - weitere projektbezogene Prüfungen aus CI oder `composer.json`.
 
+Bei jedem Modul mit Kachel-/IPSView-Ausgabe muss die Mausrad- und Scrollbedienung nach [`standards/TESTING.md`](standards/TESTING.md#mausrad-und-scrollbedienung-von-visualisierungen) ausdrücklich geprüft werden. Festgestellte Bedienfehler gehören zur Korrektur, bevor die betroffene Ausgabe als fertig gemeldet wird; ein fehlender Praxisnachweis wird sichtbar als offen dokumentiert. Gemeinsame Lösungen gehören in `Symcon_ModuleHelper`.
+
 Die gemeinsame CI-Basis ist `Symcon_ModuleCI` v1.0.0. Details stehen in [`standards/CI.md`](standards/CI.md) und [`standards/TESTING.md`](standards/TESTING.md).
 
 Melde zum Abschluss, welche Prüfungen tatsächlich ausgeführt wurden und welche nicht. Ein grüner Formatierungscheck ersetzt keine Verhaltensprüfung.
 
 ## 5. Git und Pull Requests
 
-- Arbeite in einem zur Aufgabe passenden Branch und halte Commits thematisch fokussiert.
+- Arbeite in einem zur Aufgabe passenden Branch und bereite thematisch geschlossene Änderungen vor.
+- Lokale Helper-Teststände dürfen den Pull automatisch verteilter Helper nicht blockieren. Vor der Übergabe sind sie nach [`standards/HELPER_USAGE.md`](standards/HELPER_USAGE.md#lokale-testbundles-und-automatische-verteilung) zu sichern, mit der verteilten Version abzugleichen und gezielt zu bereinigen; fachliche Moduländerungen und fremde Arbeit bleiben erhalten.
+- Commit und Push führt immer der Benutzer selbst über GitHub Desktop aus. Coding-Agenten erstellen keine Commits und führen keine Pushes aus, weder per Git-Befehl noch über Tools, APIs oder die Benutzeroberfläche. Sie fragen auch nicht nach einer Freigabe dafür.
+- Liefere nach Änderungen den zur jeweiligen Änderung passenden Commit-Betreff und die Commit-Erklärung auf Englisch als kopierbaren Text für GitHub Desktop. Die Bereitstellung dieser Texte ist kein Auftrag, Commit oder Push auszuführen.
+- Die Commit-Texte gehören auch bei reinen Dokumentationsänderungen und gemeinsamen Prüfberichten zur Übergabe, jeweils in zwei getrennten kopierbaren Textblöcken. Ein aufgeschobener Commit/Push oder der Verzicht auf einzelne Test-PRs hebt diese Pflicht nicht auf.
+- Speichere neue und bearbeitete Textdateien mit den in `.gitattributes` vorgegebenen Zeilenenden; Standard ist LF. Prüfe dies vor der Übergabe nach [`standards/GIT_WORKFLOW.md`](standards/GIT_WORKFLOW.md#zeilenenden). Unverändert zu liefernde Fremdartefakte und ausdrücklich vereinbarte Ausnahmen bleiben erhalten.
 - Pull Requests für laufende Entwicklung zielen auf den dauerhaften Zweig `dev`, sofern das Projekt nichts Abweichendes festlegt.
 - `dev` bleibt nach dem Merge bestehen und wird nicht als kurzlebiger Feature-Branch behandelt oder automatisch gelöscht.
-- Committe, pushe, merge oder veröffentliche nur auf ausdrücklichen Auftrag.
+- Merge und Veröffentlichung erfolgen nur auf ausdrücklichen Auftrag; Commit und Push verbleiben immer beim Benutzer über GitHub Desktop.
 
 Siehe [`standards/GIT_WORKFLOW.md`](standards/GIT_WORKFLOW.md).
 
@@ -82,3 +102,7 @@ Führe keine SAEF-spezifischen Deployment-Frameworks, Runtime-Mirrors, Filesets,
 ## 7. Zugriff auf Symcon-Systeme
 
 Zugriffe auf Entwicklungs- und Produktivinstanzen folgen [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md). Serverrollen und erlaubter Umfang werden projektspezifisch festgelegt; die bloße Verfügbarkeit eines Connectors erlaubt keine Installation, Reloads oder Änderungen am laufenden System.
+
+Bei Browserprüfungen von Symcon-MCP-Kachelvorschauen zuerst einen leeren Tab öffnen, dann zur Vorschau navigieren und den sichtbaren Ladeabschluss prüfen. Erst danach Accessibility-/DOM-Abfragen ausführen. Vorschau-URLs nicht direkt an die Tab-Erstellung übergeben. Details und Grenzen stehen in [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md#browserpruefung-von-mcp-kachelvorschauen).
+
+Für MCP-Wiederverbindungsprüfungen gilt zusätzlich der Ablauf unter [`standards/SYMCON_ACCESS.md`](standards/SYMCON_ACCESS.md#mcp-wiederverbindungspruefungen): erwartete Transportfehler der Testinstrumentierung abfangen, Ausfall und Wiederanlauf belegen und den Zustand vor und nach der Wiederverbindung vergleichen. Ein Timeout der Browsersteuerung ist kein Nachweis eines Modulfehlers.

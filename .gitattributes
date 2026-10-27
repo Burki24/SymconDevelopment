@@ -1,0 +1,2 @@
+# Keep repository text files consistent in the index and working tree.
+* text=auto eol=lf

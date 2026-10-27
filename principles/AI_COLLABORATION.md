@@ -26,7 +26,7 @@ Die Reihenfolge ist kein Auftrag, jede Datei vollständig zu laden. Kontext wird
 
 - Annahmen, Kompatibilitätsentscheidungen und bewusst nicht bearbeitete Punkte werden sichtbar benannt.
 - Architekturvorschläge erklären Nutzen, Grenzen und Alternativen.
-- Wiederverwendbarer Code wird nicht allein aufgrund eines theoretischen Anwendungsfalls zentralisiert.
+- Wiederverwendbarer Code wird nicht allein aufgrund eines theoretischen Anwendungsfalls zentralisiert. Voraussetzung ist die tatsächliche Nutzung durch mindestens zwei verschiedene Libraries; mehrere Module innerhalb derselben Library reichen nicht.
 - Generierte Inhalte werden vor der Übergabe fachlich geprüft; Herkunft und Lizenz externer Inhalte bleiben erkennbar.
 
 ## Verifikation und Übergabe
