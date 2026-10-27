@@ -20,6 +20,7 @@ Bestehendes Verhalten und vorhandene Konventionen haben Vorrang vor Vermutungen.
 - Gemeinsamer Code liegt unter `libs/helper`, nicht unter `.shared`.
 - Tests liegen unter `tests`, nicht unter `.tests`.
 - Jede Bibliothek und jedes veröffentlichte Modul besitzen eine gepflegte Benutzer-`README.md` nach [`standards/README_CONTENT.md`](standards/README_CONTENT.md). Fehlerdiagnose und Entwicklungshinweise gehören in die interne Projektdokumentation.
+- Jede Library-README enthält die Pflicht-Badges für Symcon/PHPModul, unterstützte Symcon-Version, tatsächliche Lizenz sowie den dynamischen Status von Check Style und Tests. Repository, Workflow und Branch müssen zur jeweiligen Library passen; siehe [`standards/README_CONTENT.md`](standards/README_CONTENT.md#pflicht-badges-in-library-readmes).
 - Konfigurationsformulare folgen [`standards/CONFIGURATION_FORM.md`](standards/CONFIGURATION_FORM.md).
 - Kachel- und IPSView-Designer mit Farboptionen enthalten eine beschriftete
   Farbkarte samt Legende, angepasst an das konkrete Modul und dessen tatsächliche
