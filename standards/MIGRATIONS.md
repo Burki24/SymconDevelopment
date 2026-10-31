@@ -6,6 +6,14 @@ Migrationen überführen veröffentlichte Installationen kontrolliert in einen n
 
 Eine neue Property mit kompatiblem Defaultwert ist nicht automatisch eine komplexe Migration. Umbenennungen, Typänderungen, neue Datenformate, geänderte Idents, verschobene Zuständigkeiten und das Entfernen verwalteter Objekte benötigen dagegen eine ausdrückliche Migrationsentscheidung.
 
+## Ablösung öffentlicher Funktionen
+
+Umbenennungen und Ablösungen veröffentlichter Funktionen benötigen einen dokumentierten Übergang. Der alte Name bleibt während dieses Übergangs als kompatibler Alias erhalten und delegiert an die neue Implementierung. Parameter, Rückgabewert und Seiteneffekte bleiben für bestehende Aufrufer kompatibel; unvermeidbare Unterschiede benötigen eine eigene Migrationsentscheidung.
+
+Ersatzfunktion, Beginn der Abkündigung und früheste Entfernungsversion werden ausdrücklich festgelegt und in Projektkontext, Benutzerreferenz und Changelog dokumentiert. Ohne festgelegten Termin wird der Alias nicht entfernt. Die Entfernung erfolgt erst in einer ausdrücklich dafür vorgesehenen inkompatiblen Veröffentlichung. Ein Abkündigungshinweis darf Rückgabewerte und fachlichen Erfolg nicht verändern und keine dauerhafte Meldungsflut erzeugen; der verwendete Meldekanal muss für die unterstützte Symcon-Version geeignet sein.
+
+Tests prüfen beide Namen gegen denselben fachlichen Vertrag und sichern auch Fehlerfälle ab. Diese Regel ist kein Auftrag, bestehende Funktionen vorsorglich umzubenennen.
+
 ## Vorbereitung
 
 Vor der Implementierung werden dokumentiert:

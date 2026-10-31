@@ -15,6 +15,14 @@ Bibliotheks- und Modul-READMEs dienen Benutzern: Sie erklären Zweck, Voraussetz
 - Projektbezogene Lizenzangaben und gegebenenfalls vorhandene Spendenhinweise. Keine fremden Zahlungslinks oder Lizenzentscheidungen aus Referenzvorlagen übernehmen.
 - Auf Bibliotheksebene ein Verweis auf die `CHANGELOG.md` nach [`CHANGELOG.md`](CHANGELOG.md).
 
+## Konfigurations- und Funktionsreferenz
+
+- Dokumentiere konfigurierbare Properties mit Formularbeschriftung, technischem Namen, Datentyp, Standardwert und Bedeutung. Erläutere zulässige Wertebereiche, Auswahlwerte und Abhängigkeiten. Wo Skriptkonfiguration sinnvoll ist, zeige ein synthetisches Beispiel einschließlich des notwendigen Anwendens der Änderungen.
+- Öffentliche Funktionen erhalten eine Signatur, Parameterbeschreibungen und ein nachvollziehbares Beispiel. Erkläre bei Kennungen, woher sie stammen und welches Format erwartet wird. Zulässige Parameterkombinationen, Voraussetzungen und Seiteneffekte müssen erkennbar sein.
+- Beschreibe, was ein Rückgabewert tatsächlich bestätigt: etwa angenommener Auftrag, abgeschlossene Änderung oder gelesener Cachezustand. Dokumentiere Fehlerfälle, Teilresultate sowie Umfangsgrenzen und das Fortsetzen seitenweiser Abfragen. Ein angenommener Geräteauftrag ist keine bestätigte Gerätewirkung.
+- Dokumentiere bei erhaltenen historischen Werten, wie Verfügbarkeit, Alter und unbekannte Zustände erkennbar sind. Beschreibe relevante Grenzen getrennt für unterstützte Visualisierungen und Clients, beispielsweise Kachel, WebFront und IPSView. Eine erfolgreiche Prüfung in einem Client belegt keine Unterstützung in einem anderen.
+- Beispiele verwenden synthetische Werte gemäß [`PRIVATE_DATA.md`](PRIVATE_DATA.md). Screenshots werden vor der Einbindung angesehen, auf private Inhalte geprüft und mit der beschriebenen Ausgabe abgeglichen. Nicht geprüftes Verhalten wird als offen gekennzeichnet und nicht als zugesicherte Funktion beschrieben.
+
 ## Pflicht-Badges in Library-READMEs
 
 Jede Library-README enthält unmittelbar nach dem Titel, vor der Beschreibung

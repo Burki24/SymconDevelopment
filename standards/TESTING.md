@@ -23,6 +23,16 @@ Alle Tests liegen unter `tests`; `.tests` wird nicht verwendet. Tests sichern be
 
 Die konkrete Testtiefe richtet sich nach dem Risiko. Reine Struktur- oder Dokumentationsänderungen benötigen keine künstlichen Verhaltenstests, wohl aber die einschlägigen Struktur- und Formatprüfungen.
 
+## Daten-, Protokoll- und Aufruferverträge
+
+Für betroffene Funktionen werden die Verträge aus [`PHP_STYLE.md`](PHP_STYLE.md) mit unabhängigen Erwartungen geprüft:
+
+- Fehlendes Feld, ungültiger Wert, gültige Null beziehungsweise `false`, veralteter Wert und Wiederkehr gültiger Daten bleiben unterscheidbar. Tests prüfen auch Verfügbarkeit und Zeitbezug erhaltener Werte.
+- Parser, Encoder und gegebenenfalls Kryptografie werden möglichst ohne Symcon-Laufzeitabhängigkeit getestet. Synthetische Referenzvektoren enthalten Herkunft beziehungsweise Herleitung, Rohwert und erwartetes Ergebnis einschließlich Einheit und Skalierung. Erwartungswerte werden nicht aus derselben Implementierung berechnet. Fremde Quellen bleiben Informationsquellen; Lizenz- und Projektgrenzen gelten weiterhin.
+- Öffentliche Aufrufe werden auf ungültige Parameterkombinationen, beobachtbare Fehlerrückmeldung, ausgebliebene Seiteneffekte bei Ablehnung und Fehler optionaler Zusatzfunktionen geprüft. Bei Seitenabfragen werden Grenzen und vollständiges Fortsetzen geprüft.
+- Wiederholtes Anwenden der Konfiguration erhält benutzerdefinierte Namen und Symbole. Schreibende Integrationen verändern ausschließlich die ausdrücklich vorgesehenen Zielobjekte und Felder und bewahren sonstige Einstellungen.
+- Versionsabhängige Laufzeitbehauptungen benötigen einen Nachweis für Symcon 9.0 nach [`PHP_STYLE.md`](PHP_STYLE.md). Ein Stub-Test oder ein Nachweis unter einer neueren Version ersetzt diesen Nachweis nicht. Fehlende Nachweise bleiben sichtbar offen und werden nicht als verbindlicher Plattformvertrag übernommen.
+
 ## Designer-Farbkarten und Lokalisierung
 
 Bei neuen oder überarbeiteten Farbdesignern gelten die Vorgaben aus
