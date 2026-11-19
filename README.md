@@ -1,5 +1,7 @@
 # SymconDevelopment
 
+[![PayPal.Me](https://img.shields.io/badge/PayPal-Me-lightblue.svg)](#spenden)
+
 `SymconDevelopment` ist die schlanke, zentrale Entwicklungsbasis für Burki24-Symcon-Projekte. Das Repository bündelt gemeinsame Arbeitsregeln, Prinzipien, Qualitätsstandards, Entscheidungsvorlagen und wiederverwendbares Wissen, ohne die einzelnen Modul-Repositories mit kopierten Regelwerken zu belasten.
 
 Die Basis ist von guten Ideen aus SAEF inspiriert, bleibt aber auf die bestehende Burki24-Infrastruktur zugeschnitten. Sie übernimmt keine SAEF-spezifischen Deployment-, Runtime-Mirror-, SSH-/PowerShell- oder MQTT-Frameworkteile.
@@ -69,3 +71,9 @@ Abweichungen von zentralen Regeln müssen begründet werden. Dauerhafte Architek
 ## Pflege
 
 Änderungen an verbindlichen Standards erfolgen per Pull Request. Änderungen mit langfristigen Architekturfolgen erhalten ein ADR. Praxiswissen ohne normativen Charakter gehört nach `knowledge/`; Beispiele und externe Referenzen gehören nach `references/`.
+
+## Spenden
+
+Mit einer freiwilligen Spende kannst du die Weiterentwicklung dieses Projekts unterstützen.
+
+[![PayPal.Me](https://img.shields.io/badge/PayPal-Me-lightblue.svg)](https://www.paypal.me/BurkhardKneiseler)
