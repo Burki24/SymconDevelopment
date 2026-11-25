@@ -18,7 +18,7 @@ Die Basis ist von guten Ideen aus SAEF inspiriert, bleibt aber auf die bestehend
 - Lokale Duplikate zentraler Helper sind nicht erlaubt.
 - CI basiert auf `Symcon_ModuleCI` v1.0.0 und umfasst StylePHP, php-cs-fixer und `validate_structure`.
 - Vor Änderungen werden die vorhandene Architektur, die Projektregeln und vergleichbare Implementierungen gelesen.
-- Der dauerhafte Entwicklungszweig `dev` bleibt nach Pull Requests bestehen.
+- Alle Aufgaben werden direkt auf dem dauerhaften Entwicklungszweig `dev` bearbeitet.
 
 Die Leserichtung beginnt in [AGENTS.md](AGENTS.md). Aufbau und Zuständigkeiten beschreibt [ARCHITECTURE.md](ARCHITECTURE.md); die ausführlichen Leitlinien und Regeln stehen unter [`principles/`](principles/) und [`standards/`](standards/).
 

@@ -2,10 +2,8 @@
 
 ## Zweige
 
-- `dev` ist der dauerhafte Integrationszweig für laufende Entwicklung.
-- Aufgaben werden in kurzlebigen, eindeutig benannten Feature- oder Fix-Branches umgesetzt.
-- Pull Requests für laufende Entwicklung zielen auf `dev`, sofern die lokale Projektregel nichts ausdrücklich anderes festlegt.
-- Nach dem Merge bleibt `dev` bestehen. Optionen zum automatischen Löschen gelten nur für den Quellbranch des Pull Requests, niemals für `dev`.
+- `dev` ist der dauerhafte Arbeits- und Integrationszweig. Bearbeite jede Aufgabe direkt auf `dev`.
+- `dev` bleibt nach Merges bestehen und ist vom automatischen Löschen ausgenommen.
 - `main` repräsentiert in den üblichen Burki24-Modul-Repositories den stabilen beziehungsweise veröffentlichten Stand.
 - Zusätzliche dauerhafte Versionszweige werden ausschließlich nach der dokumentierten Praxis des jeweiligen Repositories verwendet.
 
@@ -21,7 +19,7 @@ Die Rücksynchronisierung wird nicht durch Neuanlage oder Löschen von `dev` ers
 
 ## Änderungen vorbereiten
 
-1. Prüfe Status, aktuellen Zweig und nicht zugehörige lokale Änderungen.
+1. Prüfe den Git-Status und vorhandene lokale Änderungen. Wechsle vor der Bearbeitung auf `dev`.
 2. Aktualisiere die Arbeitsgrundlage nach dem im Projekt erlaubten Verfahren.
 3. Halte die Änderung eng am Auftrag und vermische keine unabhängigen Aufräumarbeiten.
 4. Führe die betroffenen Tests sowie Style- und Strukturprüfungen aus.

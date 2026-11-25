@@ -68,9 +68,9 @@ Melde zum Abschluss, welche Prüfungen tatsächlich ausgeführt wurden und welch
 
 ## 5. Git und Pull Requests
 
-- Arbeite in einem zur Aufgabe passenden Branch und halte Commits thematisch fokussiert.
-- Pull Requests für laufende Entwicklung zielen auf den dauerhaften Zweig `dev`, sofern das Projekt nichts Abweichendes festlegt.
-- `dev` bleibt nach dem Merge bestehen und wird nicht als kurzlebiger Feature-Branch behandelt oder automatisch gelöscht.
+- Bearbeite jede Aufgabe in `SymconDevelopment` und in allen angebundenen Projekten direkt auf `dev`. Halte Änderungen thematisch geschlossen.
+- Release-Pull-Requests gehen von `dev` an den stabilen Zweig.
+- `dev` bleibt dauerhaft bestehen und ist vom automatischen Löschen ausgenommen.
 - Committe, pushe, merge oder veröffentliche nur auf ausdrücklichen Auftrag.
 
 Siehe [`standards/GIT_WORKFLOW.md`](standards/GIT_WORKFLOW.md).

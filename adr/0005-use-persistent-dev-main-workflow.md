@@ -13,11 +13,10 @@ Die Burki24-Repositories benötigen einen stabilen veröffentlichten Stand und z
 ## Entscheidung
 
 - `main` repräsentiert den stabilen beziehungsweise veröffentlichten Stand.
-- `dev` ist der dauerhafte Integrationszweig für laufende Entwicklung.
-- Kurzlebige Feature- oder Fix-Branches zielen grundsätzlich auf `dev`, soweit das Projekt keinen begründeten abweichenden Ablauf besitzt.
+- `dev` ist der dauerhafte Arbeits- und Integrationszweig. Alle Aufgaben werden direkt auf `dev` bearbeitet.
 - Ein Release wird über einen Pull Request von `dev` nach `main` vorbereitet und geprüft.
 - Nach dem Merge wird das Ergebnis aus `main`, einschließlich des Merge-Commits, wieder nach `dev` synchronisiert.
-- `dev` wird nach einem Merge nicht gelöscht. Automatisches Löschen ist nur für tatsächlich kurzlebige Quellbranches zulässig.
+- `dev` bleibt nach Merges bestehen und ist vom automatischen Löschen ausgenommen.
 - Tags und Releases werden vom geprüften stabilen Stand erstellt.
 
 Projekte mit zusätzlichen dauerhaften Versionszweigen dokumentieren Zielrichtung und Rücksynchronisierung in ihrer lokalen `AGENTS.md`.
